@@ -5,3 +5,15 @@
   height: 400px;
   /* background-attachment: fixed; */
 }
+#footer:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  content: '';
+}
+#footer-wrap {
+  position: relative;
+  padding: 3px 3px;
+  color: var(--light-grey);
+  text-align: center;
