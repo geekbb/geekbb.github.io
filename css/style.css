@@ -1,10 +1,6 @@
 #page-header.post-bg:before {
   background-color: rgba(0,0,0,0.5);
 }
-#page-header.full_page {
-  height: 400px;
-  /* background-attachment: fixed; */
-}
 #footer:before {
   position: absolute;
   width: 100%;

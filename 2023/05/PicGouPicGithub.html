@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>PicGo + uPic + Github 搭建免费图床 | Geek</title><meta name="author" content="Geek"><meta name="copyright" content="Geek"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="介绍自从来到 xLog 就开始养成写博客的习惯，虽然 xLog 目前上传图片无限制也免费，但一直以来我使用的服务都养成了备份的习惯，也不怕跑路。对比了 Amazon S3 &amp; Cloudflare R2 ，感兴趣的可以看看 R2 vs S3，感觉 Cloudflare R2 性价比更高，还可以免费嫖 10 GB ，但总怕背刺，我不考虑大陆 IP 访问问题，所以索性换成免费的 Github，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PicGo + uPic + Github 搭建免费图床">
+<meta property="og:url" content="http://www.igeekbb.com/2023/05/PicGouPicGithub.html">
+<meta property="og:site_name" content="Geek">
+<meta property="og:description" content="介绍自从来到 xLog 就开始养成写博客的习惯，虽然 xLog 目前上传图片无限制也免费，但一直以来我使用的服务都养成了备份的习惯，也不怕跑路。对比了 Amazon S3 &amp; Cloudflare R2 ，感兴趣的可以看看 R2 vs S3，感觉 Cloudflare R2 性价比更高，还可以免费嫖 10 GB ，但总怕背刺，我不考虑大陆 IP 访问问题，所以索性换成免费的 Github，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270945085.webp">
+<meta property="article:published_time" content="2023-05-20T01:40:39.000Z">
+<meta property="article:modified_time" content="2023-07-27T01:52:17.000Z">
+<meta property="article:author" content="Geek">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="图床">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270945085.webp"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271443409.ico"><link rel="canonical" href="http://www.igeekbb.com/2023/05/PicGouPicGithub.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PicGo + uPic + Github 搭建免费图床',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-27 09:52:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/Avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270945084.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="Geek"><span class="site-name">Geek</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">PicGo + uPic + Github 搭建免费图床</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-20T01:40:39.000Z" title="发表于 2023-05-20 09:40:39">2023-05-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-27T01:52:17.000Z" title="更新于 2023-07-27 09:52:17">2023-07-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="PicGo + uPic + Github 搭建免费图床"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>自从来到 xLog 就开始养成写博客的习惯，虽然 xLog 目前上传图片无限制也免费，但一直以来我使用的服务都养成了备份的习惯，也不怕跑路。对比了 Amazon S3 &amp; Cloudflare R2 ，感兴趣的可以看看 <a target="_blank" rel="noopener" href="https://www.vantage.sh/blog/cloudflare-r2-aws-s3-comparison">R2 vs S3</a>，感觉 Cloudflare R2 性价比更高，还可以免费嫖 10 GB ，但总怕背刺，我不考虑大陆 IP 访问问题，所以索性换成免费的 Github，要比稳定，谁能比过 Github？使用总之一句话: “有备无患”。</p>
+<h3 id="Github-图库"><a href="#Github-图库" class="headerlink" title="Github 图库"></a>Github 图库</h3><h4 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h4><p>注册好Github帐号，新建仓库，仓库名记住。</p>
+<h4 id="新建-token"><a href="#新建-token" class="headerlink" title="新建 token"></a>新建 token</h4><p>1&#x2F;点击个人——“设置”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/CleanShot%202023-05-20%20at%2010.35.21@2x.png" alt="CleanShot2023-05-20at10.35.21@2x"></p>
+<p>2&#x2F;左边最下面选择” &lt;&gt;Developer settings “</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270949561.webp" alt="3"></p>
+<p>3&#x2F;选择令牌 Tokens (classic)——Generate new token (classic)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270949172.webp" alt="4"></p>
+<p>4&#x2F;备注选填，一定勾选 repo</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270949943.webp" alt="5"></p>
+<p>5&#x2F;复制好 token</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270950127.webp" alt="6"></p>
+<p>以上，Github图库仓库设置完成</p>
+<hr>
+<h3 id="PicGo"><a href="#PicGo" class="headerlink" title="PicGo"></a>PicGo</h3><h4 id="下载-PicGo"><a href="#下载-PicGo" class="headerlink" title="下载 PicGo"></a>下载 PicGo</h4><table>
+<thead>
+<tr>
+<th align="left">项目</th>
+<th align="left">地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">PicGo Github</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo">https://github.com/Molunerfinn/PicGo</a></td>
+</tr>
+<tr>
+<td align="left">PicGo 下载</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></td>
+</tr>
+</tbody></table>
+<h4 id="设置-PicGo"><a href="#设置-PicGo" class="headerlink" title="设置 PicGo"></a>设置 PicGo</h4><p>打开 PicGo 设置，选择 Github 后编辑右边的配置文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270951296.webp"></p>
+<p>填入第一步记下的仓库名（格式是 userame&#x2F;repo） 和拷贝下来的 token ，确定即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/CleanShot%202023-05-20%20at%2013.27.35@2x.png" alt="CleanShot2023-05-20at13.27.35@2x"></p>
+<hr>
+<h3 id="uPic"><a href="#uPic" class="headerlink" title="uPic"></a>uPic</h3><h4 id="下载-uPic"><a href="#下载-uPic" class="headerlink" title="下载 uPic"></a>下载 uPic</h4><table>
+<thead>
+<tr>
+<th align="left">项目</th>
+<th align="left">地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">uPic&nbsp; Github</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/gee1k/uPic">https://github.com/gee1k/uPic</a></td>
+</tr>
+<tr>
+<td align="left">Homebrew</td>
+<td align="left">brew install bigwig-club&#x2F;brew&#x2F;upic –cask</td>
+</tr>
+<tr>
+<td align="left">Github Download</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/gee1k/uPic/releases">https://github.com/gee1k/uPic/releases</a></td>
+</tr>
+</tbody></table>
+<h4 id="配置-uPic"><a href="#配置-uPic" class="headerlink" title="配置 uPic"></a>配置 uPic</h4><p>在设置中选择图床，左下脚 + “Github”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/CleanShot%202023-05-20%20at%2013.43.20@2x.png" alt="CleanShot2023-05-20at13.43.20@2x"></p>
+<blockquote>
+<ul>
+<li><code>用户名</code>: Github 用户名。例如：我的 Github 主页 <a target="_blank" rel="noopener" href="https://github.com/gee1k">https://github.com/gee1k</a>，我的用户名就是 <code>gee1k</code></li>
+<li><code>仓库名</code>: 需要储存上传文件的仓库名称。例如：我的仓库地址为 <a target="_blank" rel="noopener" href="https://github.com/gee1k/oss">https://github.com/gee1k/oss</a>，仓库名称就是<code>oss</code></li>
+<li><code>分支</code>: 分支名称，默认是<code>master</code>，如果是其他分支，就必须先创建好分支，才能上传</li>
+<li><code>Token</code>: Github 的个人访问令牌（Personal access tokens）</li>
+<li><code>域名</code>: 默认可不设置域名，会使用 Github 默认的访问地址。当你的仓库开启了 <code>pages</code> 功能，并配置好了自定义域名时，这里就可以使用你的自定义域名</li>
+<li>—引用 <a target="_blank" rel="noopener" href="https://blog.svend.cc/upic/tutorials/github/">https://blog.svend.cc/upic/tutorials/github/</a></li>
+</ul>
+</blockquote>
+<p>保存即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/CleanShot%202023-05-20%20at%2013.44.50@2x.png" alt="CleanShot2023-05-20at13.44.50@2x"></p>
+<h4 id="jsDelivr-加速"><a href="#jsDelivr-加速" class="headerlink" title="jsDelivr 加速"></a>jsDelivr 加速</h4><p>需要 <code>jsdelivr</code> CDN 加速访问请勾选👇</p>
+<p>链接将会变成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/geekbb/oss_img@×***</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/CleanShot%202023-05-20%20at%2013.44.30@2x.png" alt="CleanShot2023-05-20at13.44.30@2x"></p>
+<hr>
+<h3 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h3><p>Typora 的配置更为简单，只要你配置好 PicGo ，在 Typora 设置里选择 PicGo. app 即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/CleanShot%202023-05-20%20at%2013.55.06@2x.png" alt="CleanShot2023-05-20at13.55.06@2x"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://www.igeekbb.com">Geek</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://www.igeekbb.com/2023/05/PicGouPicGithub.html">http://www.igeekbb.com/2023/05/PicGouPicGithub.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.igeekbb.com" target="_blank">Geek</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Github/">Github</a><a class="post-meta__tags" href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270945085.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/05/ServerStatusRust.html" title="我把使用多年的哪吒监控换成了ServerStatus-Rust"><img class="cover" src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270957791.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">我把使用多年的哪吒监控换成了ServerStatus-Rust</div></div></a></div><div class="next-post pull-right"><a href="/2023/05/v2ray.html" title="个人搭梯过墙备忘录"><img class="cover" src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307270934509.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">个人搭梯过墙备忘录</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/Avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Geek</div><div class="author-info__description">🧠在家居士 | 🥦素食者 | 🏃🏻马拉松爱好者 | 💰省钱小能手 | 搭🪜技术资深学者 | 👨‍💻科技宅 | 🆕更新狂 | 🆅 六边型战五渣</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/geekbb"><i class="fab fa-twitter"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my new Blog🎉</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Github-%E5%9B%BE%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">Github 图库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-number">2.1.</span> <span class="toc-text">新建仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA-token"><span class="toc-number">2.2.</span> <span class="toc-text">新建 token</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PicGo"><span class="toc-number">3.</span> <span class="toc-text">PicGo</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD-PicGo"><span class="toc-number">3.1.</span> <span class="toc-text">下载 PicGo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE-PicGo"><span class="toc-number">3.2.</span> <span class="toc-text">设置 PicGo</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#uPic"><span class="toc-number">4.</span> <span class="toc-text">uPic</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD-uPic"><span class="toc-number">4.1.</span> <span class="toc-text">下载 uPic</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-uPic"><span class="toc-number">4.2.</span> <span class="toc-text">配置 uPic</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jsDelivr-%E5%8A%A0%E9%80%9F"><span class="toc-number">4.3.</span> <span class="toc-text">jsDelivr 加速</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Typora"><span class="toc-number">5.</span> <span class="toc-text">Typora</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By Geek</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
