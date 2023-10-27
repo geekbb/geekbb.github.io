@@ -1,174 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Amazing-QR 只需四步制作一个炫酷二维码</title>
-    <url>/2023/04/AmazingQR.html</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>标题</th>
-<th>项目地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Amazing-QR</td>
-<td><a href="https://github.com/x-hw/amazing-qr">https://github.com/x-hw/amazing-qr</a></td>
-</tr>
-</tbody></table>
-<ul>
-<li>Amazing QR，是一款开源的 Python 应用程序，用于生成炫酷的二维码图像和动态 GIF 图片<blockquote>
-<p>可生成普通二维码、带图片的艺术二维码（黑白与彩色）、动态二维码（黑白与彩色）</p>
-</blockquote>
-</li>
-</ul>
-<p class="flex">
-  <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959955.gif" alt="图片描述" width="200" height="200" />
-  <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959957.gif" alt="图片描述" width="200" height="200" />
-    <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959958.gif" alt="图片描述" width="200" height="200" />
-        <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959959.gif" alt="图片描述" width="200" height="200" />  
-  <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959794.gif" alt="图片描述" width="200" height="200" />
-
-
-
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958362.webp" alt="6"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958469.webp" alt="7"></p>
-<hr>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="生成普通-QR-码"><a href="#生成普通-QR-码" class="headerlink" title="生成普通 QR 码"></a>生成普通 QR 码</h4><h5 id="使用虚拟环境-推荐"><a href="#使用虚拟环境-推荐" class="headerlink" title="使用虚拟环境 (推荐)"></a>使用虚拟环境 (推荐)</h5><blockquote>
-<p>在虚拟环境中安装并运行 amzqr，可以确保使用的是正确的 Python 解释器和模块安装路径。</p>
-</blockquote>
-<p>首先，打开终端，创建一个新的虚拟环境：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -m venv myenv</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958785.webp" alt="8"></p>
-<h5 id="激活虚拟环境："><a href="#激活虚拟环境：" class="headerlink" title="激活虚拟环境："></a>激活虚拟环境：</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source myenv/bin/activate</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958003.webp" alt="9"></p>
-<h5 id="使用-pip-安装-amzqr"><a href="#使用-pip-安装-amzqr" class="headerlink" title="使用 pip 安装 amzqr"></a>使用 pip 安装 amzqr</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install amzqr</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251954475.webp" alt="1-1"></p>
-<h5 id="命令运行-amzqr"><a href="#命令运行-amzqr" class="headerlink" title="命令运行 amzqr"></a>命令运行 <code>amzqr</code></h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">amzqr https://github.com</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958190.webp" alt="11"></p>
-<p>🎉完成！</p>
-<p><code>/Users/geek/qrcode.png</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958993.webp" alt="12"></p>
-<hr>
-<h4 id="成生艺术二维码"><a href="#成生艺术二维码" class="headerlink" title="成生艺术二维码"></a>成生艺术二维码</h4><h5 id="黑白图片"><a href="#黑白图片" class="headerlink" title="黑白图片"></a>黑白图片</h5><blockquote>
-<p>参数-p 用来将 QR 二维码图像与一张同目录下的图片相结合，产生一张黑白图片。我是将头像放入 qr 文件夹</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">amzqr https://x.geekbb.ml -p /Users/geek/qr/qr.jpg</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958001.webp" alt="13"></p>
-<h5 id="彩色图片"><a href="#彩色图片" class="headerlink" title="彩色图片"></a>彩色图片</h5><blockquote>
-<p>加上参数 -c 可以使产生的图片由黑白变为彩色的。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">amzqr https://x.geekbb.ml -p /Users/geek/qr/qr.jpg -c -con 1.5 -bri 1.6</span><br></pre></td></tr></table></figure>
-<ul>
-<li>参数-con 用以调节图片的对比度，1.0 表示原始图片，更小的值表示更低对比度，更大反之。默认为 1.0。</li>
-<li>参数 -bri 用来调节图片的亮度，其余用法和取值与 -con 相同。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959449.webp" alt="14"></p>
-<h5 id="GIF-图片"><a href="#GIF-图片" class="headerlink" title="GIF 图片"></a>GIF 图片</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">amzqr https://x.geekbb.ml -p /Users/geek/qr/qr.gif -c -con 1.5 -bri 1.6</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959794.gif" alt="15"></p>
-<hr>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>二维码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>给外观党换一个极简终端 Alacritty + 美化</title>
-    <url>/2023/04/Alacritty.html</url>
-    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h2><blockquote>
-<p>Alacritty 是一款 快速、跨平台的 OpenGL 终端仿真器，具有合理的默认设置，但允许进行广泛的配置。通过与其他应用程序集成，而不是重新实现它们的功能，它成功地提供了一组灵活的功能，并具有高性能。目前支持的平台包括 BSD、Linux、macOS 和 Windows。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">github 地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Alacritty</td>
-<td align="left"><a href="https://github.com/alacritty/alacritty">https://github.com/alacritty/alacritty</a></td>
-</tr>
-</tbody></table>
-<ul>
-<li>下载地址：<a href="https://github.com/alacritty/alacritty/releases">alacritty</a></li>
-</ul>
-<h2 id="美化效果"><a href="#美化效果" class="headerlink" title="美化效果"></a><strong>美化效果</strong></h2><p>Alacritty (窗口)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410570.webp"></p>
-<p>Alacritty (图标)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410571.webp"></p>
-<ul>
-<li>再看看自带的</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410572.webp"></p>
-<hr>
-<p><strong>要完成上面的效果只需要三步</strong></p>
-<h3 id="美化字体"><a href="#美化字体" class="headerlink" title="美化字体"></a><strong>美化字体</strong></h3><ul>
-<li>JetBrains Mono：面向开发人员的免费开源字体</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">jetbrains</td>
-<td align="left"><a href="https://www.jetbrains.com/lp/mono/">https://www.jetbrains.com/lp/mono/</a></td>
-</tr>
-</tbody></table>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410573.webp"></p>
-<hr>
-<h3 id="美化图标"><a href="#美化图标" class="headerlink" title="美化图标"></a><strong>美化图标</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410574.webp"></p>
-<blockquote>
-<p>mac 端在应用文件夹中找到<code> Alacritty.app</code> ，右键显示简介，然后将下载的 icns 文件拖动到左上角图标上，完成替换</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Alacritty</td>
-<td align="left"><a href="https://geek.4everland.store/Alacritty.icns">点击下载</a></td>
-</tr>
-</tbody></table>
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a><strong>配置文件</strong></h3><h4 id="1、在线更新"><a href="#1、在线更新" class="headerlink" title="1、在线更新"></a><strong>1、在线更新</strong></h4><ul>
-<li>在 Alacritty 运行下面的命令，重启即可。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fLo ~/.config/alacritty/alacritty.yml --create-dir \</span><br><span class="line">    https://geek.4everland.store/alacritty.yml</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、或下载配置文件"><a href="#2、或下载配置文件" class="headerlink" title="2、或下载配置文件"></a><strong>2、或下载配置文件</strong></h4><ul>
-<li>Mac 下放到 ~&#x2F;.config&#x2F;alacritty&#x2F;alacritty.yml</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">alacritty</td>
-<td align="left"><a href="https://geek.4everland.store/alacritty.yml">点击下载</a></td>
-</tr>
-</tbody></table>
-<hr>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>App</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>本地化部署解锁 Next Level AI 对话体验 Chat Chat</title>
     <url>/2023/05/ChatChat.html</url>
     <content><![CDATA[<blockquote>
@@ -261,112 +93,6 @@
       </tags>
   </entry>
   <entry>
-    <title>小白如何把 Chatbot UI 部署在本地</title>
-    <url>/2023/04/ChatbotUI.html</url>
-    <content><![CDATA[<p><strong>余所介紹之<a href="https://geekbb.xlog.app/Github-ChatGPT-SP1#chatbot-ui">Chatbot UI</a>昔日已有所涉及，今乃吾之 ChatGPT 網頁端之主力也。吾素用 Github 之專案主頁所薦之一鍵部署於 Vercel，然近日 Vercel，或有日益眾多之使用者，令頁面載入漸見遲緩，影響體驗。欲观其能否部署於己之 VPS 或本地，故特記錄吾之部署過程。</strong></p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Chatbot UI</td>
-<td><a href="https://github.com/mckaywrigley/chatbot-ui">https://github.com/mckaywrigley/chatbot-ui</a></td>
-</tr>
-</tbody></table>
-<hr>
-<h3 id="VPS-部署-未完"><a href="#VPS-部署-未完" class="headerlink" title="VPS 部署 (未完)"></a>VPS 部署 (未完)</h3><ul>
-<li>首先我按照项目说明在 VPS 安装好各类依赖和环境，运行</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker build -t chatgpt-ui .</span><br></pre></td></tr></table></figure>
-<ul>
-<li>然后整个世界安静了，为我的小白行径自罚一杯</li>
-</ul>
-<table>
-  <tr>
-    <td style="width:50%;">
-      <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251450636.webp" style="width:100%">
-    </td>
-    <td style="width:50%;">
-      <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251450649.webp" style="width:100%">
-    </td>
-  </tr>
-</table>
-
-
-
-<p>*待我搞台更强悍的 VPS?😅</p>
-<hr>
-<h3 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>配置</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Mac OS</td>
-<td>Ventura 13.3.1</td>
-</tr>
-<tr>
-<td>Docker</td>
-<td>version 23.0.3</td>
-</tr>
-</tbody></table>
-<h4 id="打开终端"><a href="#打开终端" class="headerlink" title="打开终端"></a>打开终端</h4><blockquote>
-<p>自行 ChatGPT 安装好 Docker，我的 Docker 项目都是放在”文稿”文件夹里，即:&#x2F;Users&#x2F;geek&#x2F;Documents&#x2F;docker</p>
-</blockquote>
-<h5 id="终端进入-docker-文件夹"><a href="#终端进入-docker-文件夹" class="headerlink" title="终端进入 docker 文件夹"></a>终端进入 docker 文件夹</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /Users/geek/Documents/docker </span><br></pre></td></tr></table></figure>
-
-<h5 id="克隆-chatbot-ui-项目到本地"><a href="#克隆-chatbot-ui-项目到本地" class="headerlink" title="克隆 chatbot-ui 项目到本地"></a>克隆 chatbot-ui 项目到本地</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/mckaywrigley/chatbot-ui.git</span><br></pre></td></tr></table></figure>
-<h5 id="进入-chatbot-ui-文件夹"><a href="#进入-chatbot-ui-文件夹" class="headerlink" title="进入 chatbot-ui 文件夹"></a>进入 chatbot-ui 文件夹</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd chatbot-ui </span><br></pre></td></tr></table></figure>
-
-<h5 id="执行以下命令构建-Docker-镜像："><a href="#执行以下命令构建-Docker-镜像：" class="headerlink" title="执行以下命令构建 Docker 镜像："></a>执行以下命令构建 Docker 镜像：</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker build -t chatbot-ui .</span><br></pre></td></tr></table></figure>
-<ul>
-<li>构建成功会出现如下提示：*如果失败就问 ChatGPT😂</li>
-</ul>
-<blockquote>
-<p> &#x3D;&gt; [production 8&#x2F;8] COPY –from&#x3D;build &#x2F;app&#x2F;next-i18next.config.js .&#x2F;next  0.0s<br>  &#x3D;&gt; exporting to image                                                    10.3s<br>  &#x3D;&gt; &#x3D;&gt; exporting layers                                                   10.3s<br>  &#x3D;&gt; &#x3D;&gt; writing image sha256:bdc155462ef83c399e49a925fab840.0s<br>  &#x3D;&gt; &#x3D;&gt; naming to docker.io&#x2F;library&#x2F;chatbot-ui</p>
-</blockquote>
-<h5 id="运行-Docker"><a href="#运行-Docker" class="headerlink" title="运行 Docker"></a>运行 Docker</h5><ul>
-<li>将 xxxxxxxx 替换为你的 OpenAI API</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 chatbot-ui</span><br></pre></td></tr></table></figure>
-
-<hr>
-<ul>
-<li>要将 docker 容器从前台模式更改为后台模式，请使用以下命令：</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -d -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 chatbot-ui</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在此命令中，我们添加了一个 -d 标志，它表示分离模式。这将使 Docker 容器在后台运行，而不是前台运行。</li>
-</ul>
-<hr>
-<ul>
-<li>另外，如果您需要给容器命名，可以使用 –name 标志指定一个名称，例如：</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -d --name my-container -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 chatbot-ui</span><br></pre></td></tr></table></figure>
-<ul>
-<li>这将为容器命名为 my-container。</li>
-</ul>
-<hr>
-<h4 id="打开浏览器-搞定-🎉"><a href="#打开浏览器-搞定-🎉" class="headerlink" title="打开浏览器 (搞定)🎉"></a>打开浏览器 (搞定)🎉</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://127.0.0.1:3000/</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251450595.webp"></p>
-<blockquote>
-<p>注：我用的是软路由白名单上网，国内环境使用，还请自行研究<a href="https://github.com/x-dr/chatgptProxyAPI">chatgptProxyAPI</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>ChatGPT</tag>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Github 近期热门 ChatGPT 介绍及特点 (第一期)</title>
     <url>/2023/04/ChatGPTapp1.html</url>
     <content><![CDATA[<p><strong>盖此篇文所言，论当前热门之 Github ChatGPT 开源项目。详加介绍使人能够于短暂光阴內基本掌握其核心体系，藉此提升自身之選擇能力。</strong></p>
@@ -436,6 +162,81 @@
       </tags>
   </entry>
   <entry>
+    <title>Amazing-QR 只需四步制作一个炫酷二维码</title>
+    <url>/2023/04/AmazingQR.html</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>标题</th>
+<th>项目地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Amazing-QR</td>
+<td><a href="https://github.com/x-hw/amazing-qr">https://github.com/x-hw/amazing-qr</a></td>
+</tr>
+</tbody></table>
+<ul>
+<li>Amazing QR，是一款开源的 Python 应用程序，用于生成炫酷的二维码图像和动态 GIF 图片<blockquote>
+<p>可生成普通二维码、带图片的艺术二维码（黑白与彩色）、动态二维码（黑白与彩色）</p>
+</blockquote>
+</li>
+</ul>
+<p class="flex">
+  <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959955.gif" alt="图片描述" width="200" height="200" />
+  <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959957.gif" alt="图片描述" width="200" height="200" />
+    <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959958.gif" alt="图片描述" width="200" height="200" />
+        <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959959.gif" alt="图片描述" width="200" height="200" />  
+  <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959794.gif" alt="图片描述" width="200" height="200" />
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958362.webp" alt="6"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958469.webp" alt="7"></p>
+<hr>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="生成普通-QR-码"><a href="#生成普通-QR-码" class="headerlink" title="生成普通 QR 码"></a>生成普通 QR 码</h4><h5 id="使用虚拟环境-推荐"><a href="#使用虚拟环境-推荐" class="headerlink" title="使用虚拟环境 (推荐)"></a>使用虚拟环境 (推荐)</h5><blockquote>
+<p>在虚拟环境中安装并运行 amzqr，可以确保使用的是正确的 Python 解释器和模块安装路径。</p>
+</blockquote>
+<p>首先，打开终端，创建一个新的虚拟环境：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -m venv myenv</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958785.webp" alt="8"></p>
+<h5 id="激活虚拟环境："><a href="#激活虚拟环境：" class="headerlink" title="激活虚拟环境："></a>激活虚拟环境：</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source myenv/bin/activate</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958003.webp" alt="9"></p>
+<h5 id="使用-pip-安装-amzqr"><a href="#使用-pip-安装-amzqr" class="headerlink" title="使用 pip 安装 amzqr"></a>使用 pip 安装 amzqr</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install amzqr</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251954475.webp" alt="1-1"></p>
+<h5 id="命令运行-amzqr"><a href="#命令运行-amzqr" class="headerlink" title="命令运行 amzqr"></a>命令运行 <code>amzqr</code></h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">amzqr https://github.com</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958190.webp" alt="11"></p>
+<p>🎉完成！</p>
+<p><code>/Users/geek/qrcode.png</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958993.webp" alt="12"></p>
+<hr>
+<h4 id="成生艺术二维码"><a href="#成生艺术二维码" class="headerlink" title="成生艺术二维码"></a>成生艺术二维码</h4><h5 id="黑白图片"><a href="#黑白图片" class="headerlink" title="黑白图片"></a>黑白图片</h5><blockquote>
+<p>参数-p 用来将 QR 二维码图像与一张同目录下的图片相结合，产生一张黑白图片。我是将头像放入 qr 文件夹</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">amzqr https://x.geekbb.ml -p /Users/geek/qr/qr.jpg</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251958001.webp" alt="13"></p>
+<h5 id="彩色图片"><a href="#彩色图片" class="headerlink" title="彩色图片"></a>彩色图片</h5><blockquote>
+<p>加上参数 -c 可以使产生的图片由黑白变为彩色的。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">amzqr https://x.geekbb.ml -p /Users/geek/qr/qr.jpg -c -con 1.5 -bri 1.6</span><br></pre></td></tr></table></figure>
+<ul>
+<li>参数-con 用以调节图片的对比度，1.0 表示原始图片，更小的值表示更低对比度，更大反之。默认为 1.0。</li>
+<li>参数 -bri 用来调节图片的亮度，其余用法和取值与 -con 相同。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959449.webp" alt="14"></p>
+<h5 id="GIF-图片"><a href="#GIF-图片" class="headerlink" title="GIF 图片"></a>GIF 图片</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">amzqr https://x.geekbb.ml -p /Users/geek/qr/qr.gif -c -con 1.5 -bri 1.6</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251959794.gif" alt="15"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>二维码</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>两款平替 CleanMyMac 磁盘清理工具推荐</title>
     <url>/2023/05/CleanMyMac.html</url>
     <content><![CDATA[<blockquote>
@@ -491,122 +292,6 @@
       </categories>
       <tags>
         <tag>App</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker 部署免费 GPT4-FreeGPT</title>
-    <url>/2023/07/FreeGPT4.html</url>
-    <content><![CDATA[<p>💡 <a href="https://github.com/ramonvc/freegpt-webui">freegpt-webui</a>项目好像又行了，虽然不太稳定，免费的还要什么自行车。能用就行<br><a href="https://github.com/ramonvc/freegpt-webui">https://github.com/ramonvc/freegpt-webui</a></p>
-<blockquote>
-<p>使用 Docker 部署非常简单 (本地可用 OrbStack)</p>
-</blockquote>
-<ul>
-<li>拉取镜像</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ramonvc/freegpt-webui</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启动</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -p 1338:1338 ramonvc/freegpt-webui</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>浏览器输入（本地）</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://127.0.0.1:1338` or `http://localhost:1338</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>GPT-4 对话，我使用了<code>我爸爸妈妈结婚，为什么没有邀请我？</code> 来测试，还真是 GPT4，不过有时回答不太稳定</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/Untitled.png" alt="Untitled"></p>
-<blockquote>
-<p>而 GPT3.5-turbo 0613 还是老样子</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/Untitled%20(1).png" alt="Untitled (1)"></p>
-<aside> 💡 最后：免费 GPT，对话受网络影响容易出错，有时需要多试几次，当成备用玩玩，足也。
-</aside>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>ChatGPT</tag>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github 近期热门 ChatGPT 介绍及特点 (第二期)</title>
-    <url>/2023/04/ChatGPTapp2.html</url>
-    <content><![CDATA[<p><strong>盖此篇文所言，论当前热门之 Github ChatGPT 开源项目。详加介绍使人能够于短暂光阴內基本掌握其核心体系，藉此提升自身之選擇能力。</strong></p>
-<h2 id="Writely"><a href="#Writely" class="headerlink" title="Writely"></a><a href="https://github.com/anc95/writely">Writely</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251429131.webp"></p>
-<blockquote>
-<p>让 Notion AI 的力量无处不在！</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">它能为您做什么</span><br><span class="line">📧 写邮件</span><br><span class="line">📺 浏览推特、微博等社交媒体平台，回复网友</span><br><span class="line">😯在知乎上写故事...</span><br><span class="line">🔥 基于Open AI GPT模型，带来全新的智能书写体验。</span><br><span class="line">✍️ 支持互联网任意编辑网页的写作助手，有效提高用户写作效率和质量。</span><br><span class="line">📖 产品可以进行查询翻译和辅助阅读，大大减少用户的阅读时间，提高理解力。</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>点评:Notion AI 平替，近期更新了”支持导出自定义指令”,部分功能和<a href="https://x.geekbb.ml/Github-ChatGPT-SP1#chatgpt-box">ChatGPT Box</a>重合，ChatGPT Box 的作者也要增加“插件系统”了，卷到飞起！向你们致敬！</strong><br>运行界面<br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433311.gif"></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433330.webp"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433342.webp"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433355.gif"></p>
-<p>| Github 链接：<a href="https://github.com/anc95/writely"><strong>Writely</strong></a> | </p>
-<hr>
-<h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a><a href="https://github.com/lencx/ChatGPT">ChatGPT</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433367.webp"></p>
-<blockquote>
-<p>ChatGPT 桌面应用程序（Mac、Windows 和 Linux）</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">多平台：macOS Linux Windows</span><br><span class="line">文本转语音</span><br><span class="line">导出 ChatGPT 历史记录（PNG、PDF 和 Markdown）</span><br><span class="line">主窗口和系统托盘支持自定义 URL，可将任何网站包装到桌面应用程序中</span><br><span class="line">自动应用程序升级通知</span><br><span class="line">常用快捷键</span><br><span class="line">系统托盘悬停窗口</span><br><span class="line">强大的菜单项</span><br><span class="line">支持斜杠命令及其配置（可以手动配置或从文件 #55 同步)</span><br><span class="line">自定义全局快捷方式 （#108)</span><br><span class="line">弹出搜索（#122 鼠标选择内容，不超过 400 个字符）：该应用程序是使用 Tauri 构建的，由于其安全限制，某些操作按钮将不起作用，因此我们建议您转到您的浏览器。</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>点评：不需要 API，登录 ChatGPT 帐号就可以使用 (自行判断违规风险),对于我来说，省钱就是王道。作者开了新坑<a href="https://github.com/lencx/nofwl">NoFWL</a>，也可多作了解</strong></li>
-</ul>
-<p>运行界面<br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433379.webp"></p>
-<p>| Github 链接：<a href="https://github.com/lencx/ChatGPT"><strong>ChatGPT</strong></a> | </p>
-<hr>
-<h2 id="OpenAl-Translator"><a href="#OpenAl-Translator" class="headerlink" title="OpenAl Translator"></a><a href="https://github.com/yetone/openai-translator">OpenAl Translator</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433401.webp"></p>
-<blockquote>
-<p>不仅仅是翻译的翻译器 - 由 OpenAI 提供支持。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">支持三种翻译模式：翻译、润色、总结</span><br><span class="line">支持 55 种语言的相互翻译、润色和总结功能</span><br><span class="line">支持实时翻译、润色和总结，以最快的速度响应用户，让翻译、润色和总结的过程达到前所未有的流畅和顺滑</span><br><span class="line">支持自定义翻译文本</span><br><span class="line">支持一键复制</span><br><span class="line">支持 TTS</span><br><span class="line">有桌面端应用，全平台（Windows + macOS + Linux）支持！</span><br><span class="line">同时支持 OpenAI 和 Azure OpenAI Service</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p><strong>点评：终结 Bob 的明星产品，光芒四射，无需过多介绍！</strong><br> 运行界面<br> <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433413.webp"></p>
-<p> <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433426.gif"></p>
-<p> <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433438.webp"></p>
-</li>
-</ul>
-<p>| Github 链接：<a href="https://github.com/yetone/openai-translator"><strong>OpenAl Translator</strong></a> | </p>
-<hr>
-<h2 id="ChatHub"><a href="#ChatHub" class="headerlink" title="ChatHub"></a><a href="https://github.com/chathub-dev/chathub">ChatHub</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433450.webp"></p>
-<blockquote>
-<p>ChatHub 是款全能聊天机器人客户端</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">🤖 在一个应用中使用不同的聊天机器人，目前支持 ChatGPT、新的 Bing Chat 和 Google Bard，未来将集成更多机器人</span><br><span class="line">💬 同时与多个聊天机器人聊天，方便比较它们的答案</span><br><span class="line">🚀 支持 ChatGPT API 模式，比 ChatGPT Plus 更快、更省成本</span><br><span class="line">📊 在使用 ChatGPT API 模式时，可以查看令牌使用统计信息</span><br><span class="line">🔍 快捷方式，可以快速在浏览器中的任何位置激活应用程序</span><br><span class="line">🎨 支持 Markdown 和代码高亮显示</span><br><span class="line">📚 自定义提示和社区提示的 Prompt 库</span><br><span class="line">💾 本地保存对话历史记录</span><br><span class="line">📥 导入和导出所有数据</span><br><span class="line">🔗 将对话分享为 Markdown</span><br><span class="line">🌙 暗黑模式</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p><strong>点评：浏览器扩展中的明星产品，AI 瑞士军刀，各家产品对比神器</strong><br>运行界面</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433463.webp"></p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433476.webp"></p>
-</li>
-</ul>
-<p>| Github 链接：<a href="https://github.com/chathub-dev/chathub"><strong>ChatHub</strong></a> | </p>
-<hr>
-<h2 id="MacGPT"><a href="#MacGPT" class="headerlink" title="MacGPT"></a><a href="https://www.macgpt.com/">MacGPT</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433488.webp"></p>
-<blockquote>
-<p>Mac 和菜单栏上的 ChatGPT</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用全局功能，您可以在任何地方使用Mac访问ChatGPT。只需激活弹出在屏幕中间的全局文本字段，就可以开始与ChatGPT聊天。</span><br><span class="line">只需输入您的触发短语和提示，ChatGPT直接带入您的文本字段中，使用MacGPT Inline。</span><br><span class="line">迅速从您的菜单栏、网站或API本地访问chatGPT。</span><br><span class="line">访问ChatGPT网站原生应用或者从菜单栏进行访问，无需支付任何额外费用！</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>点评：目前使用主力，特色功能多，高度融合 Mac OS，极致好用</strong></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433500.gif"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433513.gif"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433525.gif"></p>
-<p>| 官网：<a href="%5BMacGPT%5D(https://www.macgpt.com/)"><strong>ChatHub</strong></a> | </p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>ChatGPT</tag>
       </tags>
   </entry>
   <entry>
@@ -742,84 +427,318 @@
       </tags>
   </entry>
   <entry>
-    <title>macOS 14 Sonoma 博通网卡驱动支持</title>
-    <url>/2023/09/Hackintoswifi.html</url>
-    <content><![CDATA[<h3 id="macOS-14-Sonoma"><a href="#macOS-14-Sonoma" class="headerlink" title="macOS 14 Sonoma"></a>macOS 14 Sonoma</h3><p>众所周知，苹果 macOS 14 终于把大刀抡向博通无线网卡，<strong>BCM94360 &#x2F; BCM943602</strong> 都无法在 Sonoma 驱动，目前的解决方案只有使用 <strong>OpenCore Legacy Patcher</strong>，可以完美驱动博通无线网卡，唯一缺点就是每次升级 OS 都需要<strong>OpenCore Legacy Patcher</strong>打补丁，下面是操作教程。</p>
-<p><strong>OpenCore Legacy Patcher</strong> 已经对 macOS Sonoma 有初步支持，原文 <a href="https://github.com/dortania/OpenCore-Legacy-Patcher/pull/1077">https://github.com/dortania/OpenCore-Legacy-Patcher/pull/1077</a></p>
-<h3 id="OpenCore-设置"><a href="#OpenCore-设置" class="headerlink" title="OpenCore 设置"></a>OpenCore 设置</h3><h4 id="NVRAM-随机访问存储器设置"><a href="#NVRAM-随机访问存储器设置" class="headerlink" title="NVRAM-随机访问存储器设置"></a>NVRAM-随机访问存储器设置</h4><blockquote>
-<p>将系统完整性保护设为 0x0803、禁用 AMFI</p>
-</blockquote>
-<ul>
-<li>在 NVRAM&gt;Add&gt;7C436110-AB2A-4BBB-A880-FE41995C9F82&gt;csr-active-config 添加 <code>03080000</code></li>
-<li>NVRAM&gt;Add&gt;7C436110-AB2A-4BBB-A880-FE41995C9F82&gt;boot-args 添加 <code>amfi=0x80</code></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272116730.webp"></p>
+    <title>Docker 部署免费 GPT4-FreeGPT</title>
+    <url>/2023/07/FreeGPT4.html</url>
+    <content><![CDATA[<p>💡 <a href="https://github.com/ramonvc/freegpt-webui">freegpt-webui</a>项目好像又行了，虽然不太稳定，免费的还要什么自行车。能用就行<br><a href="https://github.com/ramonvc/freegpt-webui">https://github.com/ramonvc/freegpt-webui</a></p>
 <blockquote>
-<p>将 csr-active-config 添加到删除</p>
+<p>使用 Docker 部署非常简单 (本地可用 OrbStack)</p>
 </blockquote>
 <ul>
-<li>在 NVRAM&gt;Delete&gt;7C436110-AB2A-4BBB-A880-FE41995C9F82&gt; 添加<code>csr-active-config</code></li>
+<li>拉取镜像</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272119688.webp"></p>
-<h4 id="Misc-其它设置"><a href="#Misc-其它设置" class="headerlink" title="Misc-其它设置"></a>Misc-其它设置</h4><blockquote>
-<p>将安全启动模型设置为 Disabled</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ramonvc/freegpt-webui</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -p 1338:1338 ramonvc/freegpt-webui</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>浏览器输入（本地）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://127.0.0.1:1338` or `http://localhost:1338</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>GPT-4 对话，我使用了<code>我爸爸妈妈结婚，为什么没有邀请我？</code> 来测试，还真是 GPT4，不过有时回答不太稳定</p>
 </blockquote>
-<ul>
-<li>Misc &gt; Security &gt; SecureBootModel &gt; <code>Disabled</code></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272121775.webp"></p>
-<h4 id="Kernel-内核设置"><a href="#Kernel-内核设置" class="headerlink" title="Kernel-内核设置"></a>Kernel-内核设置</h4><p>按以下顺序注入三个 kext   (<strong><u>一定要按图设置，否则有卡白苹果的风险</u></strong>)</p>
-<p>下载： <strong><a href="https://github.com/dortania/OpenCore-Legacy-Patcher/blob/e21efa975c0cf228cb36e81a974bc6b4c27c7807/payloads/Kexts/Wifi/IOSkywalkFamily-v1.0.0.zip">IOSkywalk.kext</a>、<a href="https://github.com/dortania/OpenCore-Legacy-Patcher/blob/e21efa975c0cf228cb36e81a974bc6b4c27c7807/payloads/Kexts/Wifi/IO80211FamilyLegacy-v1.0.0.zip">IO80211FamilyLegacy.kext</a></strong> （右边下载原始文件）</p>
-<ul>
-<li>OSkywalk.kext</li>
-<li>O80211FamilyLegacy.kext</li>
-<li>O80211FamilyLegacy.kext(AirPortBrcmNIC)</li>
-<li><strong>最小内核设置为 23.0.0</strong></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272123218.webp"></p>
-<p>阻止<code>com.apple.iokit.IOSkywalkFamily</code>加载 (<strong><u>一定要按图设置，否则有卡白苹果的风险</u></strong>)</p>
-<ul>
-<li><strong>最小内核设置为 23.0.0</strong></li>
-<li><strong>Strategy(策略) 设置为 Exclude(阻止)</strong></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272130168.webp"></p>
-<h4 id="以上设置好后重启电脑"><a href="#以上设置好后重启电脑" class="headerlink" title="以上设置好后重启电脑"></a>以上设置好后重启电脑</h4><hr>
-<h3 id="OpenCore-Legacy-Patcher-设置"><a href="#OpenCore-Legacy-Patcher-设置" class="headerlink" title="OpenCore Legacy Patcher 设置"></a>OpenCore Legacy Patcher 设置</h3><p>OpenCore Legacy Patcher <a href="https://bit.ly/3ZAH0ve">下载</a></p>
-<ul>
-<li>点 Post-Install Root Patch</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272136489.webp"></p>
-<ul>
-<li>Start Root Patching</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272138408.webp"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272139664.webp"></p>
-<h4 id="以上设置好后重启电脑-1"><a href="#以上设置好后重启电脑-1" class="headerlink" title="以上设置好后重启电脑"></a>以上设置好后重启电脑</h4><hr>
-<h3 id="搞定"><a href="#搞定" class="headerlink" title="搞定"></a>搞定</h3><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272140309.webp"></p>
-<p>且玩且珍惜~~</p>
-<hr>
-<h3 id="番外-博通网卡速率问题"><a href="#番外-博通网卡速率问题" class="headerlink" title="番外 博通网卡速率问题"></a>番外 博通网卡速率问题</h3><p>早在 macOS 13 我就发现，博通部分网卡，虽然免驱，但是链接后速率很低（350Mbps 以下），刚开始以为是无线路由问题，后来才知道需要调整所属地区代码。</p>
-<ul>
-<li><p>下载 <a href="https://github.com/acidanthera/AirportBrcmFixup/tags">AirportBrcmFixup.kext</a></p>
-</li>
-<li><p>放入 Kernel-内核设置，最大内核按图设置。（注意加载顺序）</p>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309281337152.webp"> </p>
-<ul>
-<li>NVRAM-随机访问存储器设置 boot-args 添加 <code>-brcmfxbeta brcmfx-country=HK</code> 地区设置成香港</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309281346642.webp"></p>
-<ul>
-<li>保存重启搞定</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309281347552.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/Untitled.png" alt="Untitled"></p>
+<blockquote>
+<p>而 GPT3.5-turbo 0613 还是老样子</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img@master/uPic/Untitled%20(1).png" alt="Untitled (1)"></p>
+<aside> 💡 最后：免费 GPT，对话受网络影响容易出错，有时需要多试几次，当成备用玩玩，足也。
+</aside>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>AI</category>
       </categories>
       <tags>
-        <tag>黑苹果</tag>
+        <tag>ChatGPT</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给外观党换一个极简终端 Alacritty + 美化</title>
+    <url>/2023/04/Alacritty.html</url>
+    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h2><blockquote>
+<p>Alacritty 是一款 快速、跨平台的 OpenGL 终端仿真器，具有合理的默认设置，但允许进行广泛的配置。通过与其他应用程序集成，而不是重新实现它们的功能，它成功地提供了一组灵活的功能，并具有高性能。目前支持的平台包括 BSD、Linux、macOS 和 Windows。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">github 地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Alacritty</td>
+<td align="left"><a href="https://github.com/alacritty/alacritty">https://github.com/alacritty/alacritty</a></td>
+</tr>
+</tbody></table>
+<ul>
+<li>下载地址：<a href="https://github.com/alacritty/alacritty/releases">alacritty</a></li>
+</ul>
+<h2 id="美化效果"><a href="#美化效果" class="headerlink" title="美化效果"></a><strong>美化效果</strong></h2><p>Alacritty (窗口)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410570.webp"></p>
+<p>Alacritty (图标)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410571.webp"></p>
+<ul>
+<li>再看看自带的</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410572.webp"></p>
+<hr>
+<p><strong>要完成上面的效果只需要三步</strong></p>
+<h3 id="美化字体"><a href="#美化字体" class="headerlink" title="美化字体"></a><strong>美化字体</strong></h3><ul>
+<li>JetBrains Mono：面向开发人员的免费开源字体</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">jetbrains</td>
+<td align="left"><a href="https://www.jetbrains.com/lp/mono/">https://www.jetbrains.com/lp/mono/</a></td>
+</tr>
+</tbody></table>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410573.webp"></p>
+<hr>
+<h3 id="美化图标"><a href="#美化图标" class="headerlink" title="美化图标"></a><strong>美化图标</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261410574.webp"></p>
+<blockquote>
+<p>mac 端在应用文件夹中找到<code> Alacritty.app</code> ，右键显示简介，然后将下载的 icns 文件拖动到左上角图标上，完成替换</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Alacritty</td>
+<td align="left"><a href="https://geek.4everland.store/Alacritty.icns">点击下载</a></td>
+</tr>
+</tbody></table>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a><strong>配置文件</strong></h3><h4 id="1、在线更新"><a href="#1、在线更新" class="headerlink" title="1、在线更新"></a><strong>1、在线更新</strong></h4><ul>
+<li>在 Alacritty 运行下面的命令，重启即可。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fLo ~/.config/alacritty/alacritty.yml --create-dir \</span><br><span class="line">    https://geek.4everland.store/alacritty.yml</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、或下载配置文件"><a href="#2、或下载配置文件" class="headerlink" title="2、或下载配置文件"></a><strong>2、或下载配置文件</strong></h4><ul>
+<li>Mac 下放到 ~&#x2F;.config&#x2F;alacritty&#x2F;alacritty.yml</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">alacritty</td>
+<td align="left"><a href="https://geek.4everland.store/alacritty.yml">点击下载</a></td>
+</tr>
+</tbody></table>
+<hr>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>App</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github 近期热门 ChatGPT 介绍及特点 (第二期)</title>
+    <url>/2023/04/ChatGPTapp2.html</url>
+    <content><![CDATA[<p><strong>盖此篇文所言，论当前热门之 Github ChatGPT 开源项目。详加介绍使人能够于短暂光阴內基本掌握其核心体系，藉此提升自身之選擇能力。</strong></p>
+<h2 id="Writely"><a href="#Writely" class="headerlink" title="Writely"></a><a href="https://github.com/anc95/writely">Writely</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251429131.webp"></p>
+<blockquote>
+<p>让 Notion AI 的力量无处不在！</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">它能为您做什么</span><br><span class="line">📧 写邮件</span><br><span class="line">📺 浏览推特、微博等社交媒体平台，回复网友</span><br><span class="line">😯在知乎上写故事...</span><br><span class="line">🔥 基于Open AI GPT模型，带来全新的智能书写体验。</span><br><span class="line">✍️ 支持互联网任意编辑网页的写作助手，有效提高用户写作效率和质量。</span><br><span class="line">📖 产品可以进行查询翻译和辅助阅读，大大减少用户的阅读时间，提高理解力。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>点评:Notion AI 平替，近期更新了”支持导出自定义指令”,部分功能和<a href="https://x.geekbb.ml/Github-ChatGPT-SP1#chatgpt-box">ChatGPT Box</a>重合，ChatGPT Box 的作者也要增加“插件系统”了，卷到飞起！向你们致敬！</strong><br>运行界面<br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433311.gif"></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433330.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433342.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433355.gif"></p>
+<p>| Github 链接：<a href="https://github.com/anc95/writely"><strong>Writely</strong></a> | </p>
+<hr>
+<h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a><a href="https://github.com/lencx/ChatGPT">ChatGPT</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433367.webp"></p>
+<blockquote>
+<p>ChatGPT 桌面应用程序（Mac、Windows 和 Linux）</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">多平台：macOS Linux Windows</span><br><span class="line">文本转语音</span><br><span class="line">导出 ChatGPT 历史记录（PNG、PDF 和 Markdown）</span><br><span class="line">主窗口和系统托盘支持自定义 URL，可将任何网站包装到桌面应用程序中</span><br><span class="line">自动应用程序升级通知</span><br><span class="line">常用快捷键</span><br><span class="line">系统托盘悬停窗口</span><br><span class="line">强大的菜单项</span><br><span class="line">支持斜杠命令及其配置（可以手动配置或从文件 #55 同步)</span><br><span class="line">自定义全局快捷方式 （#108)</span><br><span class="line">弹出搜索（#122 鼠标选择内容，不超过 400 个字符）：该应用程序是使用 Tauri 构建的，由于其安全限制，某些操作按钮将不起作用，因此我们建议您转到您的浏览器。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>点评：不需要 API，登录 ChatGPT 帐号就可以使用 (自行判断违规风险),对于我来说，省钱就是王道。作者开了新坑<a href="https://github.com/lencx/nofwl">NoFWL</a>，也可多作了解</strong></li>
+</ul>
+<p>运行界面<br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433379.webp"></p>
+<p>| Github 链接：<a href="https://github.com/lencx/ChatGPT"><strong>ChatGPT</strong></a> | </p>
+<hr>
+<h2 id="OpenAl-Translator"><a href="#OpenAl-Translator" class="headerlink" title="OpenAl Translator"></a><a href="https://github.com/yetone/openai-translator">OpenAl Translator</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433401.webp"></p>
+<blockquote>
+<p>不仅仅是翻译的翻译器 - 由 OpenAI 提供支持。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">支持三种翻译模式：翻译、润色、总结</span><br><span class="line">支持 55 种语言的相互翻译、润色和总结功能</span><br><span class="line">支持实时翻译、润色和总结，以最快的速度响应用户，让翻译、润色和总结的过程达到前所未有的流畅和顺滑</span><br><span class="line">支持自定义翻译文本</span><br><span class="line">支持一键复制</span><br><span class="line">支持 TTS</span><br><span class="line">有桌面端应用，全平台（Windows + macOS + Linux）支持！</span><br><span class="line">同时支持 OpenAI 和 Azure OpenAI Service</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>点评：终结 Bob 的明星产品，光芒四射，无需过多介绍！</strong><br> 运行界面<br> <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433413.webp"></p>
+<p> <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433426.gif"></p>
+<p> <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433438.webp"></p>
+</li>
+</ul>
+<p>| Github 链接：<a href="https://github.com/yetone/openai-translator"><strong>OpenAl Translator</strong></a> | </p>
+<hr>
+<h2 id="ChatHub"><a href="#ChatHub" class="headerlink" title="ChatHub"></a><a href="https://github.com/chathub-dev/chathub">ChatHub</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433450.webp"></p>
+<blockquote>
+<p>ChatHub 是款全能聊天机器人客户端</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">🤖 在一个应用中使用不同的聊天机器人，目前支持 ChatGPT、新的 Bing Chat 和 Google Bard，未来将集成更多机器人</span><br><span class="line">💬 同时与多个聊天机器人聊天，方便比较它们的答案</span><br><span class="line">🚀 支持 ChatGPT API 模式，比 ChatGPT Plus 更快、更省成本</span><br><span class="line">📊 在使用 ChatGPT API 模式时，可以查看令牌使用统计信息</span><br><span class="line">🔍 快捷方式，可以快速在浏览器中的任何位置激活应用程序</span><br><span class="line">🎨 支持 Markdown 和代码高亮显示</span><br><span class="line">📚 自定义提示和社区提示的 Prompt 库</span><br><span class="line">💾 本地保存对话历史记录</span><br><span class="line">📥 导入和导出所有数据</span><br><span class="line">🔗 将对话分享为 Markdown</span><br><span class="line">🌙 暗黑模式</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>点评：浏览器扩展中的明星产品，AI 瑞士军刀，各家产品对比神器</strong><br>运行界面</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433463.webp"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433476.webp"></p>
+</li>
+</ul>
+<p>| Github 链接：<a href="https://github.com/chathub-dev/chathub"><strong>ChatHub</strong></a> | </p>
+<hr>
+<h2 id="MacGPT"><a href="#MacGPT" class="headerlink" title="MacGPT"></a><a href="https://www.macgpt.com/">MacGPT</a></h2><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433488.webp"></p>
+<blockquote>
+<p>Mac 和菜单栏上的 ChatGPT</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用全局功能，您可以在任何地方使用Mac访问ChatGPT。只需激活弹出在屏幕中间的全局文本字段，就可以开始与ChatGPT聊天。</span><br><span class="line">只需输入您的触发短语和提示，ChatGPT直接带入您的文本字段中，使用MacGPT Inline。</span><br><span class="line">迅速从您的菜单栏、网站或API本地访问chatGPT。</span><br><span class="line">访问ChatGPT网站原生应用或者从菜单栏进行访问，无需支付任何额外费用！</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>点评：目前使用主力，特色功能多，高度融合 Mac OS，极致好用</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433500.gif"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433513.gif"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251433525.gif"></p>
+<p>| 官网：<a href="%5BMacGPT%5D(https://www.macgpt.com/)"><strong>ChatHub</strong></a> | </p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小白如何把 Chatbot UI 部署在本地</title>
+    <url>/2023/04/ChatbotUI.html</url>
+    <content><![CDATA[<p><strong>余所介紹之<a href="https://geekbb.xlog.app/Github-ChatGPT-SP1#chatbot-ui">Chatbot UI</a>昔日已有所涉及，今乃吾之 ChatGPT 網頁端之主力也。吾素用 Github 之專案主頁所薦之一鍵部署於 Vercel，然近日 Vercel，或有日益眾多之使用者，令頁面載入漸見遲緩，影響體驗。欲观其能否部署於己之 VPS 或本地，故特記錄吾之部署過程。</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chatbot UI</td>
+<td><a href="https://github.com/mckaywrigley/chatbot-ui">https://github.com/mckaywrigley/chatbot-ui</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="VPS-部署-未完"><a href="#VPS-部署-未完" class="headerlink" title="VPS 部署 (未完)"></a>VPS 部署 (未完)</h3><ul>
+<li>首先我按照项目说明在 VPS 安装好各类依赖和环境，运行</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker build -t chatgpt-ui .</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后整个世界安静了，为我的小白行径自罚一杯</li>
+</ul>
+<table>
+  <tr>
+    <td style="width:50%;">
+      <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251450636.webp" style="width:100%">
+    </td>
+    <td style="width:50%;">
+      <img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251450649.webp" style="width:100%">
+    </td>
+  </tr>
+</table>
+
+
+
+<p>*待我搞台更强悍的 VPS?😅</p>
+<hr>
+<h3 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>配置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mac OS</td>
+<td>Ventura 13.3.1</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>version 23.0.3</td>
+</tr>
+</tbody></table>
+<h4 id="打开终端"><a href="#打开终端" class="headerlink" title="打开终端"></a>打开终端</h4><blockquote>
+<p>自行 ChatGPT 安装好 Docker，我的 Docker 项目都是放在”文稿”文件夹里，即:&#x2F;Users&#x2F;geek&#x2F;Documents&#x2F;docker</p>
+</blockquote>
+<h5 id="终端进入-docker-文件夹"><a href="#终端进入-docker-文件夹" class="headerlink" title="终端进入 docker 文件夹"></a>终端进入 docker 文件夹</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /Users/geek/Documents/docker </span><br></pre></td></tr></table></figure>
+
+<h5 id="克隆-chatbot-ui-项目到本地"><a href="#克隆-chatbot-ui-项目到本地" class="headerlink" title="克隆 chatbot-ui 项目到本地"></a>克隆 chatbot-ui 项目到本地</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/mckaywrigley/chatbot-ui.git</span><br></pre></td></tr></table></figure>
+<h5 id="进入-chatbot-ui-文件夹"><a href="#进入-chatbot-ui-文件夹" class="headerlink" title="进入 chatbot-ui 文件夹"></a>进入 chatbot-ui 文件夹</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd chatbot-ui </span><br></pre></td></tr></table></figure>
+
+<h5 id="执行以下命令构建-Docker-镜像："><a href="#执行以下命令构建-Docker-镜像：" class="headerlink" title="执行以下命令构建 Docker 镜像："></a>执行以下命令构建 Docker 镜像：</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker build -t chatbot-ui .</span><br></pre></td></tr></table></figure>
+<ul>
+<li>构建成功会出现如下提示：*如果失败就问 ChatGPT😂</li>
+</ul>
+<blockquote>
+<p> &#x3D;&gt; [production 8&#x2F;8] COPY –from&#x3D;build &#x2F;app&#x2F;next-i18next.config.js .&#x2F;next  0.0s<br>  &#x3D;&gt; exporting to image                                                    10.3s<br>  &#x3D;&gt; &#x3D;&gt; exporting layers                                                   10.3s<br>  &#x3D;&gt; &#x3D;&gt; writing image sha256:bdc155462ef83c399e49a925fab840.0s<br>  &#x3D;&gt; &#x3D;&gt; naming to docker.io&#x2F;library&#x2F;chatbot-ui</p>
+</blockquote>
+<h5 id="运行-Docker"><a href="#运行-Docker" class="headerlink" title="运行 Docker"></a>运行 Docker</h5><ul>
+<li>将 xxxxxxxx 替换为你的 OpenAI API</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 chatbot-ui</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li>要将 docker 容器从前台模式更改为后台模式，请使用以下命令：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -d -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 chatbot-ui</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在此命令中，我们添加了一个 -d 标志，它表示分离模式。这将使 Docker 容器在后台运行，而不是前台运行。</li>
+</ul>
+<hr>
+<ul>
+<li>另外，如果您需要给容器命名，可以使用 –name 标志指定一个名称，例如：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -d --name my-container -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 chatbot-ui</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这将为容器命名为 my-container。</li>
+</ul>
+<hr>
+<h4 id="打开浏览器-搞定-🎉"><a href="#打开浏览器-搞定-🎉" class="headerlink" title="打开浏览器 (搞定)🎉"></a>打开浏览器 (搞定)🎉</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://127.0.0.1:3000/</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251450595.webp"></p>
+<blockquote>
+<p>注：我用的是软路由白名单上网，国内环境使用，还请自行研究<a href="https://github.com/x-dr/chatgptProxyAPI">chatgptProxyAPI</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGPT</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -952,36 +871,6 @@
       </categories>
       <tags>
         <tag>VPS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稳定三年的斐讯 K2T 三台 KVR 组网方案</title>
-    <url>/2023/08/K2TKVR.html</url>
-    <content><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>早在 19 年，看了“司波图“的《<a href="https://www.youtube.com/watch?v=mfo3M1zL1Ss&t=103s&ab_channel=%E5%8F%B8%E6%B3%A2%E5%9B%BE">斐讯 K2T 无线路由 KVR 组网实战</a>》，高通 Soc 方案，QCA9886 无线芯片。作为垃圾佬中的性价比之王，种草了斐讯 K2T，当时 K2T 还是矿难产品，各大二手平台充斥着物美价廉的 K2T，随即入手两台斐讯 K2T+ 新三路由器给家里组网。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081341812.webp"></p>
-<h2 id="K2T-刷机"><a href="#K2T-刷机" class="headerlink" title="K2T 刷机"></a>K2T 刷机</h2><p>记得 2019 年购买时还是斐讯原装系统，需要自己刷 breed，也是在“<a href="https://www.right.com.cn/forum/forum.php?mod=forumdisplay&fid=158&filter=typeid&typeid=19">恩山论坛 K2T 版块</a>”找到刷机教程搞定，现在购买的基本都刷好 OpenWRT 或集客 AC 了，自然也刷好了 breed。在这三年的使用中，发现新三路由器 (Newifi3) 刷集客固件组网还是没有 K2T 稳定，AP 管理时常掉线（网未断）。就在前两天刷 PDD 又看到了 K2T，价格居然降下来了，70 元入手一台，把三路由器 (Newifi3) 替换，组成 K2T 三台 KVR，爽歪歪。</p>
-<h3 id="进入-Breed"><a href="#进入-Breed" class="headerlink" title="进入 Breed"></a>进入 Breed</h3><p>到货后直接戳住 ‘RESET’ 孔，上电开机，breed 后台是 192.168.1.1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081414052.webp"></p>
-<p>刷入集客官网下载的固件<a href="http://file.cnrouter.com/index.php/Index/index.html?model_id=45&device_type_id=4">GECOOS_K2T_QCA956X_7.1_2022022200.bin</a> （无需注册，功能解锁）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081417606.webp"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081956778.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081956779.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081956780.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081956781.webp"></p>
-<h2 id="接入集客-AP"><a href="#接入集客-AP" class="headerlink" title="接入集客 AP"></a>接入集客 AP</h2><p>重启后自动接入部署在 Unraid 的集客网关 AC</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308082111904.webp"></p>
-<p>配好默认模板，接入后自动套用 </p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308082111905.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308082111906.webp"></p>
-<h2 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h2><p>这里借用司波图的图</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081435502.webp"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081448001.webp"></p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>斐讯 K2T 无线路由做为家宽在 500M 以内，如果喜欢折腾和追求性价比，还是非常推荐。这两台在近四年的使用中，一直稳定运行，中途一只电源坏过一次，在 PDD 单补了一个电源大概在 30 元左右，成本已经很低了。</p>
-<hr>
-<p>就在准备发布这篇博文的时候，PDD 购买的 K2T 电源就故障了，具体表现是每个 10 分钟就重启，已申请退款😂，马上重新在淘宝以 65 元下单。所以买矿难产品就是看人品，想买到全新基本不可能，好在另外两台一直稳定了近四年，已经值票价。来吧，垃圾佬就不要怕折腾。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>K2T</tag>
-        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
@@ -1141,203 +1030,6 @@
       </tags>
   </entry>
   <entry>
-    <title>从 macOS 到 iPhone 全面拥抱 RIME 输入法</title>
-    <url>/2023/04/RIME.html</url>
-    <content><![CDATA[<blockquote>
-<p>中州韵输入法引擎是由佛振编写的开源中文输入法，目前项目网站、源代码均托管在 GitHub。基于同一个核心架构，该输入法分为三个官方发行版：Linux 发行版中州韵、Windows 发行版小狼毫、macOS 发行版鼠须管。— <a href="https://zh.wikipedia.org/zh-cn/%E4%B8%AD%E5%B7%9E%E9%9F%BB%E8%BC%B8%E5%85%A5%E6%B3%95%E5%BC%95%E6%93%8E">维基百科</a></p>
-</blockquote>
-<h2 id="我的看法"><a href="#我的看法" class="headerlink" title="我的看法"></a>我的看法</h2><h3 id="初始"><a href="#初始" class="headerlink" title="初始"></a>初始</h3><p>我是一名五笔输入法使用者，大约在 16 年接触到了中州韵输入法引擎，当时使用的是 Windows 发行版小狼毫。相比于搜狗输入法，这种输入法没有设置界面，全凭用户通过修改用户文件夹或程序文件夹里的 YAML 配置文件来客制化自己的输入法，在当时绝对是一股清流。后来，像大多数人一样，由于找不到各种功能的配置文件，入门即放弃。几年后，我断断续续地使用过，但总是感觉不得要领。</p>
-<h3 id="转机"><a href="#转机" class="headerlink" title="转机"></a>转机</h3><p>直到最近，我看到一篇博文《<a href="https://ssnhd.com/2022/01/06/rime/">Rime Squirrel 鼠须管输入法配置详解</a>》，通读过才算正真了解了 RIME 输入法，就是博主的这张图彻底解决了我找不到各种配置文件目录的问题，我真心建议想用好 RIME 输入法的朋友仔细看看这篇博文，你一定会从中得到很多收获。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436637.webp"></p>
-<ul>
-<li>随即磨拳擦掌再次开始安装使用</li>
-</ul>
-<h2 id="入门到资深"><a href="#入门到资深" class="headerlink" title="入门到资深"></a>入门到资深</h2><h3 id="macOS-安装"><a href="#macOS-安装" class="headerlink" title="macOS 安装"></a>macOS 安装</h3><blockquote>
-<p>macOS 安装<a href="https://rime.im/">鼠须管</a>，Windows 安装<a href="https://github.com/rime/weasel">小狼毫</a></p>
-</blockquote>
-<p>如果你是单独使用拼音&amp;五笔，大可用博文中的<a href="https://github.com/ssnhd/rime/archive/refs/heads/master.zip">配置</a>懒人包，覆盖自已配置即可，不必折腾</p>
-<h3 id="五笔拼音混输"><a href="#五笔拼音混输" class="headerlink" title="五笔拼音混输"></a>五笔拼音混输</h3><p>如果你是五笔拼音混输使用者，那你可以使用我的<a href="https://github.com/geekbb/-RIME-geek/archive/refs/heads/main.zip">配置</a>文件覆盖使用，修改如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">📝default.custom.yaml👇</span><br><span class="line">* 五笔拼音混输设置为默认方案</span><br><span class="line">* 候选词数量 10</span><br><span class="line">📝pinyin_simp.schema.yaml👇</span><br><span class="line">* 模糊音纠错全开 (南方人福音)</span><br><span class="line">📝squirrel.custom.yaml👇</span><br><span class="line">* 后选字改为竖排</span><br><span class="line">* 字体设置为霞鹜文楷 </span><br><span class="line">* 候选字大小设置为28(更适合4K屏幕)</span><br><span class="line">* 集成皮肤N套（首推微信键盘皮肤“深浅”色）</span><br><span class="line">📝installation.yaml👇</span><br><span class="line">* 同步至 iCloud （文件夹RimeSync）</span><br><span class="line">📝wubi86_jidian_pinyin.schema.yaml👇</span><br><span class="line">*四码上屏。四码唯一时，自动上屏(影响拼音组字)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>同步 iCloud 请打开 installation.yaml 将倒数二行 geek 改为你的 Mac 管理员名称“&#x2F;Users&#x2F;<font color="#ff0000">geek</font>&#x2F;Library&#x2F;Mobi……”</li>
-<li>霞鹜文楷字体下载 <a href="https://github.com/lxgw/LxgwWenKai">https://github.com/lxgw/LxgwWenKai</a></li>
-</ul>
-<h3 id="皮肤效果"><a href="#皮肤效果" class="headerlink" title="皮肤效果"></a>皮肤效果</h3><blockquote>
-<p>首选皮肤”微信键盘皮肤”，香不香！</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436636.webp"></p>
-<blockquote>
-<p>另外几套皮肤 (借用博主的图)</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436638.webp"></p>
-<h3 id="词库管理推荐"><a href="#词库管理推荐" class="headerlink" title="词库管理推荐"></a>词库管理推荐</h3><blockquote>
-<p>管理 #Rime #五笔 词库的工具，可添加、删除、批量导入外部词条、批量生成指定版本的五笔编码，支持 macOS Windows Ubuntu 多个平台</p>
-</blockquote>
-<p><a href="https://github.com/KyleBing/wubi-dict-editor">五笔码表助手 for Rime</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436639.webp"></p>
-<p>可以看到，拼音词库是 65116，五笔词库是 89271，还不够造吗？，有了这个词库工具，自己造吧<br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436640.webp"></p>
-<ul>
-<li>这不比微信输入法强？顺嘴一提，为了您的隐私，真心不建议国内用户安装微信输入法。</li>
-</ul>
-<h3 id="iPhone-安装"><a href="#iPhone-安装" class="headerlink" title="iPhone 安装"></a>iPhone 安装</h3><table>
-<thead>
-<tr>
-<th align="left">项目</th>
-<th align="left">地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><div>仓输入法</div></td>
-<td align="left"><a href="https://github.com/imfuxiao/Hamster">https://github.com/imfuxiao/Hamster</a></td>
-</tr>
-<tr>
-<td align="left">App Store</td>
-<td align="left"><a href="https://apps.apple.com/cn/app/%E4%BB%93%E8%BE%93%E5%85%A5%E6%B3%95/id6446617683?itsct=apps_box_badge&itscg=30200">https://apps.apple.com/cn/app/%E4%BB%93%E8%BE%93%E5%85%A5%E6%B3%95/id6446617683?itsct=apps_box_badge&amp;itscg=30200</a></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p><strong>仓输入法</strong> 经过几次迭代，已经很完备了，推荐使用。</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436641.webp"></p>
-<h3 id="iPhone-拼音方案"><a href="#iPhone-拼音方案" class="headerlink" title="iPhone 拼音方案"></a>iPhone 拼音方案</h3><blockquote>
-<p>只推荐<a href="https://github.com/iDvel/rime-ice">雾凇拼音</a>，将<a href="https://github.com/iDvel/rime-ice">雾凇拼音</a>打包下载解压重命名为 Rime</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436642.webp"></p>
-<h3 id="输入方案上传"><a href="#输入方案上传" class="headerlink" title="输入方案上传"></a>输入方案上传</h3><blockquote>
-<p>打开网页，将原来的 Rime 方案删除，上传雾凇拼音包，注意文件夹还是要命名为 Rime </p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436643.webp"></p>
-<blockquote>
-<p>选择雾凇拼音，然后重新部署即可。</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436644.webp"></p>
-<blockquote>
-<p>切记不要打开配色方案，相信我，用自带的主题，又快又简洁！</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436645.webp"></p>
-<ul>
-<li>模糊音请修改 <code>rime_ice.schema.yaml</code> 文件</li>
-</ul>
-<hr>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这篇文章适用于那些既会打五笔，但又忘记某些字根需要拼音辅助的朋友。希望这篇文章能对你们有所帮助， (没错，说的就是我！)</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>App 输入法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>124 元实现最佳性价比双千兆软路由 OpenWrt</title>
-    <url>/2023/05/Routeropenwrt.html</url>
-    <content><![CDATA[<blockquote>
-<p>本文所有配件均来至二手闲鱼，无任何推广成份，只是技术分享</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019416.webp"></p>
-<h3 id="购入"><a href="#购入" class="headerlink" title="购入"></a>购入</h3><p>这台我家云是我在 2020 年在闲鱼上以 85 元购得的。当时卖家已经刷好了 omv，我打算将其用作一个轻量级 NAS。随着片片越来越多，一个硬盘的 NAS 空间已经捉襟见肘，慢慢就搁置仓库。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019417.webp"></p>
-<p>没想到三年过去了，价格居然没有多大变化，相比 N1 R2S 那个炒得老高的溢价，不知道好多少倍</p>
-<h3 id="软路由需求"><a href="#软路由需求" class="headerlink" title="软路由需求"></a>软路由需求</h3><p>最近有一个使用软路由的场景需求，要求不高，我决定从仓库里拿出我家云刷成 OpenWrt, 此外，它还有一个 USB 3.0 接口，于是我在闲鱼上以 39 元收购了一个绿联 USB 千兆网卡，实现了双千兆软路由，真正的最佳性价比</p>
-<p>总价 85+39&#x3D;124 元，还要什么自行车。</p>
-<h3 id="硬件配置"><a href="#硬件配置" class="headerlink" title="硬件配置"></a>硬件配置</h3><p>CPU RK3328  eMMC 8G 的储存空间  1G 内存</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019418.webp"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019419.webp"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019420.webp"></p>
-<p>做一个软路由足够了，平时还跑一两个 docker 也是没有问题</p>
-<h3 id="关于刷机"><a href="#关于刷机" class="headerlink" title="关于刷机"></a>关于刷机</h3><p>刷机视频在 YouTube 和 B 站有一大把，大家可以参考，只是额外需要用双 USB 公头刷机，建议大家不要单独购买 (节省成本到极致)，直接和我一样，随便找两根四芯 USB 充电线，自己接上就 OK。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019421.webp"></p>
-<h3 id="固件选择"><a href="#固件选择" class="headerlink" title="固件选择"></a>固件选择</h3><h4 id="高大全就选恩山论坛的-flippy"><a href="#高大全就选恩山论坛的-flippy" class="headerlink" title="高大全就选恩山论坛的 flippy  +"></a>高大全就选恩山论坛的 flippy  +</h4><p>集成 N 多功能，USB 网卡驱动也无优</p>
-<p><a href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=4076037&highlight=%E6%88%91%E5%AE%B6%E4%BA%91">https://www.right.com.cn/forum/forum.php?mod=viewthread&amp;tid=4076037&amp;highlight=%E6%88%91%E5%AE%B6%E4%BA%91</a></p>
-<p>电报群下载地址，我家云固件的英文叫 <code>L1pro</code></p>
-<p><a href="https://t.me/openwrt_flippy">https://t.me/openwrt_flippy</a></p>
-<hr>
-<h4 id="自己制定-OpenWrt-固件-supes"><a href="#自己制定-OpenWrt-固件-supes" class="headerlink" title="自己制定 OpenWrt 固件 supes"></a>自己制定 OpenWrt 固件 supes</h4><p><a href="https://supes.top/">https://supes.top/</a> </p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019422.webp"></p>
-<p>需要什么功能自己选，免费只支持 5 个，不过已经够用了，集成了 <a href="https://op.supes.top/packages/aarch64_cortex-a53">https://op.supes.top/packages/aarch64_cortex-a53</a> 软件仓库，后期可以在 OpenWrt 里面自行安装</p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>我家云相关介绍文章除了在恩山论坛，&lt;什么值得买&gt;里面也有，所以大家想了解得更详细，更多的玩法，可以搜索看看。现在它做为一个合格的过墙的软路由，性能已是绰绰有余。<br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019423.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019424.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019425.webp"></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>OpenWrt</tag>
-        <tag>软路由</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>618 RSSHub 订阅《什么值得买》榜单分享</title>
-    <url>/2023/06/RSSHub.html</url>
-    <content><![CDATA[<blockquote>
-<p>618 快到了，大家有什么购买计划？如何还没有，不妨订阅我分享的《什么值得买》各类榜单、史底、卷活动😁，把手拿出来，我们一起剁。</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631747.webp"></p>
-<h3 id="什么值得买"><a href="#什么值得买" class="headerlink" title="什么值得买"></a>什么值得买</h3><p>《什么值得买》网站只提供了五个频道 RSS</p>
-<p>订阅链接：<a href="https://www.smzdm.com/dingyue">https://www.smzdm.com/dingyue</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631748.webp"></p>
-<h3 id="什么值得买-RSSHub"><a href="#什么值得买-RSSHub" class="headerlink" title="什么值得买 + RSSHub"></a>什么值得买 + RSSHub</h3><p>以下 Rss 订阅链接是结合 <code>万物皆可 RSS</code> 的 <a href="https://docs.rsshub.app/">RSSHub</a> 打造</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631749.webp"></p>
-<h4 id="RSSHub-由路《什么值得买》"><a href="#RSSHub-由路《什么值得买》" class="headerlink" title="RSSHub 由路《什么值得买》"></a>RSSHub 由路《什么值得买》</h4><p>RSSHub&#x2F;购物&#x2F;什么值得买 <a href="https://docs.rsshub.app/shopping.html#shen-me-zhi-de-mai">https://docs.rsshub.app/shopping.html#shen-me-zhi-de-mai</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631750.webp"></p>
-<p>该页面提供非常详细的《什么值得买》RSS 定制频道方法，这里我分享几个自用了频道，大家可以举一反三，客制化自己喜欢的订阅频道。</p>
-<hr>
-<h4 id="好价类"><a href="#好价类" class="headerlink" title="好价类"></a>好价类</h4><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631751.webp"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631752.webp"></p>
-<blockquote>
-<p>好价电商榜 - 券活动 -24 小时 <a href="https://rsshub.app/smzdm/ranking/dianshang/24/24">https://rsshub.app/smzdm/ranking/dianshang/24/24</a></p>
-</blockquote>
-<blockquote>
-<p>好价电商榜 - 天猫 -24 小时 <a href="https://rsshub.app/smzdm/ranking/dianshang/25/24">https://rsshub.app/smzdm/ranking/dianshang/25/24</a></p>
-</blockquote>
-<blockquote>
-<p>好价电商榜 - 京东 -24 小时 <a href="https://rsshub.app/smzdm/ranking/dianshang/23/24">https://rsshub.app/smzdm/ranking/dianshang/23/24</a></p>
-</blockquote>
-<blockquote>
-<p>好价品类榜 - 全部 -3 小时 <a href="https://rsshub.app/smzdm/ranking/pinlei/11/3">https://rsshub.app/smzdm/ranking/pinlei/11/3</a></p>
-</blockquote>
-<blockquote>
-<p>好价品类榜 - 电脑数码 -24 小时 <a href="https://rsshub.app/smzdm/ranking/pinlei/13/24">https://rsshub.app/smzdm/ranking/pinlei/13/24</a></p>
-</blockquote>
-<blockquote>
-<p>好价品类榜 - 运动户外 -24 小时 <a href="https://rsshub.app/smzdm/ranking/pinlei/14/24">https://rsshub.app/smzdm/ranking/pinlei/14/24</a></p>
-</blockquote>
-<hr>
-<h4 id="文章类"><a href="#文章类" class="headerlink" title="文章类"></a>文章类</h4><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631753.webp"></p>
-<blockquote>
-<p>好文榜 - 资讯 -24 小时 <a href="https://rsshub.app/smzdm/ranking/haowen/zx/24">https://rsshub.app/smzdm/ranking/haowen/zx/24</a></p>
-</blockquote>
-<blockquote>
-<p>好文榜 - 原创 -24 小时 <a href="https://rsshub.app/smzdm/ranking/haowen/yc/24">https://rsshub.app/smzdm/ranking/haowen/yc/24</a></p>
-</blockquote>
-<blockquote>
-<p>今日热门 - 什么值得买好文 <a href="https://rsshub.app/smzdm/haowen/1">https://rsshub.app/smzdm/haowen/1</a></p>
-</blockquote>
-<blockquote>
-<p>周热门 - 什么值得买好文 <a href="https://post.smzdm.com/hot_7">https://post.smzdm.com/hot_7</a></p>
-</blockquote>
-<blockquote>
-<p>月热门 - 什么值得买好文 <a href="https://post.smzdm.com/hot_30">https://post.smzdm.com/hot_30</a></p>
-</blockquote>
-<hr>
-<h4 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h4><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631754.webp"></p>
-<blockquote>
-<p>历史低价 - 什么值得买 <a href="https://rsshub.app/smzdm/keyword/%E5%8E%86%E5%8F%B2%E4%BD%8E%E4%BB%B7">https://rsshub.app/smzdm/keyword/%E5%8E%86%E5%8F%B2%E4%BD%8E%E4%BB%B7</a></p>
-</blockquote>
-<blockquote>
-<p>电脑数码 - 什么值得买 <a href="https://rsshub.app/smzdm/keyword/%E7%94%B5%E8%84%91%E6%95%B0%E7%A0%81">https://rsshub.app/smzdm/keyword/%E7%94%B5%E8%84%91%E6%95%B0%E7%A0%81</a></p>
-</blockquote>
-<blockquote>
-<p>运动户外 - 什么值得买 <a href="https://rsshub.app/smzdm/keyword/%E8%BF%90%E5%8A%A8%E6%88%B7%E5%A4%96">https://rsshub.app/smzdm/keyword/%E8%BF%90%E5%8A%A8%E6%88%B7%E5%A4%96</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>RSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PicGo + uPic + Github 搭建免费图床</title>
     <url>/2023/05/PicGouPicGithub.html</url>
     <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>自从来到 xLog 就开始养成写博客的习惯，虽然 xLog 目前上传图片无限制也免费，但一直以来我使用的服务都养成了备份的习惯，也不怕跑路。对比了 Amazon S3 &amp; Cloudflare R2，感兴趣的可以看看 <a href="https://www.vantage.sh/blog/cloudflare-r2-aws-s3-comparison">R2 vs S3</a>，感觉 Cloudflare R2 性价比更高，还可以免费嫖 10 GB，但总怕背刺，我不考虑大陆 IP 访问问题，所以索性换成免费的 Github，要比稳定，谁能比过 Github？使用总之一句话：”有备无患”。</p>
@@ -1426,6 +1118,145 @@
       <tags>
         <tag>Github</tag>
         <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>618 RSSHub 订阅《什么值得买》榜单分享</title>
+    <url>/2023/06/RSSHub.html</url>
+    <content><![CDATA[<blockquote>
+<p>618 快到了，大家有什么购买计划？如何还没有，不妨订阅我分享的《什么值得买》各类榜单、史底、卷活动😁，把手拿出来，我们一起剁。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631747.webp"></p>
+<h3 id="什么值得买"><a href="#什么值得买" class="headerlink" title="什么值得买"></a>什么值得买</h3><p>《什么值得买》网站只提供了五个频道 RSS</p>
+<p>订阅链接：<a href="https://www.smzdm.com/dingyue">https://www.smzdm.com/dingyue</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631748.webp"></p>
+<h3 id="什么值得买-RSSHub"><a href="#什么值得买-RSSHub" class="headerlink" title="什么值得买 + RSSHub"></a>什么值得买 + RSSHub</h3><p>以下 Rss 订阅链接是结合 <code>万物皆可 RSS</code> 的 <a href="https://docs.rsshub.app/">RSSHub</a> 打造</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631749.webp"></p>
+<h4 id="RSSHub-由路《什么值得买》"><a href="#RSSHub-由路《什么值得买》" class="headerlink" title="RSSHub 由路《什么值得买》"></a>RSSHub 由路《什么值得买》</h4><p>RSSHub&#x2F;购物&#x2F;什么值得买 <a href="https://docs.rsshub.app/shopping.html#shen-me-zhi-de-mai">https://docs.rsshub.app/shopping.html#shen-me-zhi-de-mai</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631750.webp"></p>
+<p>该页面提供非常详细的《什么值得买》RSS 定制频道方法，这里我分享几个自用了频道，大家可以举一反三，客制化自己喜欢的订阅频道。</p>
+<hr>
+<h4 id="好价类"><a href="#好价类" class="headerlink" title="好价类"></a>好价类</h4><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631751.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631752.webp"></p>
+<blockquote>
+<p>好价电商榜 - 券活动 -24 小时 <a href="https://rsshub.app/smzdm/ranking/dianshang/24/24">https://rsshub.app/smzdm/ranking/dianshang/24/24</a></p>
+</blockquote>
+<blockquote>
+<p>好价电商榜 - 天猫 -24 小时 <a href="https://rsshub.app/smzdm/ranking/dianshang/25/24">https://rsshub.app/smzdm/ranking/dianshang/25/24</a></p>
+</blockquote>
+<blockquote>
+<p>好价电商榜 - 京东 -24 小时 <a href="https://rsshub.app/smzdm/ranking/dianshang/23/24">https://rsshub.app/smzdm/ranking/dianshang/23/24</a></p>
+</blockquote>
+<blockquote>
+<p>好价品类榜 - 全部 -3 小时 <a href="https://rsshub.app/smzdm/ranking/pinlei/11/3">https://rsshub.app/smzdm/ranking/pinlei/11/3</a></p>
+</blockquote>
+<blockquote>
+<p>好价品类榜 - 电脑数码 -24 小时 <a href="https://rsshub.app/smzdm/ranking/pinlei/13/24">https://rsshub.app/smzdm/ranking/pinlei/13/24</a></p>
+</blockquote>
+<blockquote>
+<p>好价品类榜 - 运动户外 -24 小时 <a href="https://rsshub.app/smzdm/ranking/pinlei/14/24">https://rsshub.app/smzdm/ranking/pinlei/14/24</a></p>
+</blockquote>
+<hr>
+<h4 id="文章类"><a href="#文章类" class="headerlink" title="文章类"></a>文章类</h4><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631753.webp"></p>
+<blockquote>
+<p>好文榜 - 资讯 -24 小时 <a href="https://rsshub.app/smzdm/ranking/haowen/zx/24">https://rsshub.app/smzdm/ranking/haowen/zx/24</a></p>
+</blockquote>
+<blockquote>
+<p>好文榜 - 原创 -24 小时 <a href="https://rsshub.app/smzdm/ranking/haowen/yc/24">https://rsshub.app/smzdm/ranking/haowen/yc/24</a></p>
+</blockquote>
+<blockquote>
+<p>今日热门 - 什么值得买好文 <a href="https://rsshub.app/smzdm/haowen/1">https://rsshub.app/smzdm/haowen/1</a></p>
+</blockquote>
+<blockquote>
+<p>周热门 - 什么值得买好文 <a href="https://post.smzdm.com/hot_7">https://post.smzdm.com/hot_7</a></p>
+</blockquote>
+<blockquote>
+<p>月热门 - 什么值得买好文 <a href="https://post.smzdm.com/hot_30">https://post.smzdm.com/hot_30</a></p>
+</blockquote>
+<hr>
+<h4 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h4><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271631754.webp"></p>
+<blockquote>
+<p>历史低价 - 什么值得买 <a href="https://rsshub.app/smzdm/keyword/%E5%8E%86%E5%8F%B2%E4%BD%8E%E4%BB%B7">https://rsshub.app/smzdm/keyword/%E5%8E%86%E5%8F%B2%E4%BD%8E%E4%BB%B7</a></p>
+</blockquote>
+<blockquote>
+<p>电脑数码 - 什么值得买 <a href="https://rsshub.app/smzdm/keyword/%E7%94%B5%E8%84%91%E6%95%B0%E7%A0%81">https://rsshub.app/smzdm/keyword/%E7%94%B5%E8%84%91%E6%95%B0%E7%A0%81</a></p>
+</blockquote>
+<blockquote>
+<p>运动户外 - 什么值得买 <a href="https://rsshub.app/smzdm/keyword/%E8%BF%90%E5%8A%A8%E6%88%B7%E5%A4%96">https://rsshub.app/smzdm/keyword/%E8%BF%90%E5%8A%A8%E6%88%B7%E5%A4%96</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>RSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>稳定三年的斐讯 K2T 三台 KVR 组网方案</title>
+    <url>/2023/08/K2TKVR.html</url>
+    <content><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>早在 19 年，看了“司波图“的《<a href="https://www.youtube.com/watch?v=mfo3M1zL1Ss&t=103s&ab_channel=%E5%8F%B8%E6%B3%A2%E5%9B%BE">斐讯 K2T 无线路由 KVR 组网实战</a>》，高通 Soc 方案，QCA9886 无线芯片。作为垃圾佬中的性价比之王，种草了斐讯 K2T，当时 K2T 还是矿难产品，各大二手平台充斥着物美价廉的 K2T，随即入手两台斐讯 K2T+ 新三路由器给家里组网。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081341812.webp"></p>
+<h2 id="K2T-刷机"><a href="#K2T-刷机" class="headerlink" title="K2T 刷机"></a>K2T 刷机</h2><p>记得 2019 年购买时还是斐讯原装系统，需要自己刷 breed，也是在“<a href="https://www.right.com.cn/forum/forum.php?mod=forumdisplay&fid=158&filter=typeid&typeid=19">恩山论坛 K2T 版块</a>”找到刷机教程搞定，现在购买的基本都刷好 OpenWRT 或集客 AC 了，自然也刷好了 breed。在这三年的使用中，发现新三路由器 (Newifi3) 刷集客固件组网还是没有 K2T 稳定，AP 管理时常掉线（网未断）。就在前两天刷 PDD 又看到了 K2T，价格居然降下来了，70 元入手一台，把三路由器 (Newifi3) 替换，组成 K2T 三台 KVR，爽歪歪。</p>
+<h3 id="进入-Breed"><a href="#进入-Breed" class="headerlink" title="进入 Breed"></a>进入 Breed</h3><p>到货后直接戳住 ‘RESET’ 孔，上电开机，breed 后台是 192.168.1.1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081414052.webp"></p>
+<p>刷入集客官网下载的固件<a href="http://file.cnrouter.com/index.php/Index/index.html?model_id=45&device_type_id=4">GECOOS_K2T_QCA956X_7.1_2022022200.bin</a> （无需注册，功能解锁）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081417606.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081956778.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081956779.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081956780.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081956781.webp"></p>
+<h2 id="接入集客-AP"><a href="#接入集客-AP" class="headerlink" title="接入集客 AP"></a>接入集客 AP</h2><p>重启后自动接入部署在 Unraid 的集客网关 AC</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308082111904.webp"></p>
+<p>配好默认模板，接入后自动套用 </p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308082111905.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308082111906.webp"></p>
+<h2 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h2><p>这里借用司波图的图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081435502.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202308081448001.webp"></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>斐讯 K2T 无线路由做为家宽在 500M 以内，如果喜欢折腾和追求性价比，还是非常推荐。这两台在近四年的使用中，一直稳定运行，中途一只电源坏过一次，在 PDD 单补了一个电源大概在 30 元左右，成本已经很低了。</p>
+<hr>
+<p>就在准备发布这篇博文的时候，PDD 购买的 K2T 电源就故障了，具体表现是每个 10 分钟就重启，已申请退款😂，马上重新在淘宝以 65 元下单。所以买矿难产品就是看人品，想买到全新基本不可能，好在另外两台一直稳定了近四年，已经值票价。来吧，垃圾佬就不要怕折腾。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>K2T</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>124 元实现最佳性价比双千兆软路由 OpenWrt</title>
+    <url>/2023/05/Routeropenwrt.html</url>
+    <content><![CDATA[<blockquote>
+<p>本文所有配件均来至二手闲鱼，无任何推广成份，只是技术分享</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019416.webp"></p>
+<h3 id="购入"><a href="#购入" class="headerlink" title="购入"></a>购入</h3><p>这台我家云是我在 2020 年在闲鱼上以 85 元购得的。当时卖家已经刷好了 omv，我打算将其用作一个轻量级 NAS。随着片片越来越多，一个硬盘的 NAS 空间已经捉襟见肘，慢慢就搁置仓库。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019417.webp"></p>
+<p>没想到三年过去了，价格居然没有多大变化，相比 N1 R2S 那个炒得老高的溢价，不知道好多少倍</p>
+<h3 id="软路由需求"><a href="#软路由需求" class="headerlink" title="软路由需求"></a>软路由需求</h3><p>最近有一个使用软路由的场景需求，要求不高，我决定从仓库里拿出我家云刷成 OpenWrt, 此外，它还有一个 USB 3.0 接口，于是我在闲鱼上以 39 元收购了一个绿联 USB 千兆网卡，实现了双千兆软路由，真正的最佳性价比</p>
+<p>总价 85+39&#x3D;124 元，还要什么自行车。</p>
+<h3 id="硬件配置"><a href="#硬件配置" class="headerlink" title="硬件配置"></a>硬件配置</h3><p>CPU RK3328  eMMC 8G 的储存空间  1G 内存</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019418.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019419.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019420.webp"></p>
+<p>做一个软路由足够了，平时还跑一两个 docker 也是没有问题</p>
+<h3 id="关于刷机"><a href="#关于刷机" class="headerlink" title="关于刷机"></a>关于刷机</h3><p>刷机视频在 YouTube 和 B 站有一大把，大家可以参考，只是额外需要用双 USB 公头刷机，建议大家不要单独购买 (节省成本到极致)，直接和我一样，随便找两根四芯 USB 充电线，自己接上就 OK。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019421.webp"></p>
+<h3 id="固件选择"><a href="#固件选择" class="headerlink" title="固件选择"></a>固件选择</h3><h4 id="高大全就选恩山论坛的-flippy"><a href="#高大全就选恩山论坛的-flippy" class="headerlink" title="高大全就选恩山论坛的 flippy  +"></a>高大全就选恩山论坛的 flippy  +</h4><p>集成 N 多功能，USB 网卡驱动也无优</p>
+<p><a href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=4076037&highlight=%E6%88%91%E5%AE%B6%E4%BA%91">https://www.right.com.cn/forum/forum.php?mod=viewthread&amp;tid=4076037&amp;highlight=%E6%88%91%E5%AE%B6%E4%BA%91</a></p>
+<p>电报群下载地址，我家云固件的英文叫 <code>L1pro</code></p>
+<p><a href="https://t.me/openwrt_flippy">https://t.me/openwrt_flippy</a></p>
+<hr>
+<h4 id="自己制定-OpenWrt-固件-supes"><a href="#自己制定-OpenWrt-固件-supes" class="headerlink" title="自己制定 OpenWrt 固件 supes"></a>自己制定 OpenWrt 固件 supes</h4><p><a href="https://supes.top/">https://supes.top/</a> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019422.webp"></p>
+<p>需要什么功能自己选，免费只支持 5 个，不过已经够用了，集成了 <a href="https://op.supes.top/packages/aarch64_cortex-a53">https://op.supes.top/packages/aarch64_cortex-a53</a> 软件仓库，后期可以在 OpenWrt 里面自行安装</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>我家云相关介绍文章除了在恩山论坛，&lt;什么值得买&gt;里面也有，所以大家想了解得更详细，更多的玩法，可以搜索看看。现在它做为一个合格的过墙的软路由，性能已是绰绰有余。<br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019423.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019424.webp"><br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307271019425.webp"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>OpenWrt</tag>
+        <tag>软路由</tag>
       </tags>
   </entry>
   <entry>
@@ -1631,44 +1462,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Siri 接入 ChatGPT 之捷径</title>
-    <url>/2023/04/SiriChatGPT.html</url>
-    <content><![CDATA[<p>ChatGPT 之 Siri 捷径道甚为广传，常之甚烂大街而已，余在此惟推一款、自用最實、最简洁，期眾皆喜之！</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Hey GPT</td>
-<td><a href="https://www.icloud.com/shortcuts/8bcc2979d6e34a3d90a48c3f77f96d68">https://www.icloud.com/shortcuts/8bcc2979d6e34a3d90a48c3f77f96d68</a></td>
-</tr>
-<tr>
-<td>来源</td>
-<td><a href="https://twitter.com/mckaywrigley/status/1640414764852711425">https://twitter.com/mckaywrigley/status/1640414764852711425</a></td>
-</tr>
-</tbody></table>
-<p><strong>&gt; 打开相机扫一扫，添加 Hey GPT 捷径</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251529088.webp"></p>
-<p>此 Siri 捷径是由<a href="https://twitter.com/mckaywrigley">Mckay Wrigley</a>制作</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251529089.webp"></p>
-<p>他为此录了一个视频<br><a href="https://twitter.com/i/status/1640414764852711425">https://twitter.com/i/status/1640414764852711425</a></p>
-<hr>
-<p>当然，我还是喜欢通过呼出 Hey Siri 然后说 Hey GPT 来调用，效率高了不少</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251529090.webp"></p>
-<p>进入捷径，将朗读改为你想要的名字</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251529091.webp"></p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我把使用多年的哪吒监控换成了 ServerStatus-Rust</title>
     <url>/2023/05/ServerStatusRust.html</url>
     <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
@@ -1738,6 +1531,44 @@
       </categories>
       <tags>
         <tag>VPS，监控</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Siri 接入 ChatGPT 之捷径</title>
+    <url>/2023/04/SiriChatGPT.html</url>
+    <content><![CDATA[<p>ChatGPT 之 Siri 捷径道甚为广传，常之甚烂大街而已，余在此惟推一款、自用最實、最简洁，期眾皆喜之！</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hey GPT</td>
+<td><a href="https://www.icloud.com/shortcuts/8bcc2979d6e34a3d90a48c3f77f96d68">https://www.icloud.com/shortcuts/8bcc2979d6e34a3d90a48c3f77f96d68</a></td>
+</tr>
+<tr>
+<td>来源</td>
+<td><a href="https://twitter.com/mckaywrigley/status/1640414764852711425">https://twitter.com/mckaywrigley/status/1640414764852711425</a></td>
+</tr>
+</tbody></table>
+<p><strong>&gt; 打开相机扫一扫，添加 Hey GPT 捷径</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251529088.webp"></p>
+<p>此 Siri 捷径是由<a href="https://twitter.com/mckaywrigley">Mckay Wrigley</a>制作</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251529089.webp"></p>
+<p>他为此录了一个视频<br><a href="https://twitter.com/i/status/1640414764852711425">https://twitter.com/i/status/1640414764852711425</a></p>
+<hr>
+<p>当然，我还是喜欢通过呼出 Hey Siri 然后说 Hey GPT 来调用，效率高了不少</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251529090.webp"></p>
+<p>进入捷径，将朗读改为你想要的名字</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307251529091.webp"></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGPT</tag>
       </tags>
   </entry>
   <entry>
@@ -1988,6 +1819,175 @@
       </tags>
   </entry>
   <entry>
+    <title>macOS 14 Sonoma 博通网卡驱动支持</title>
+    <url>/2023/09/Hackintoswifi.html</url>
+    <content><![CDATA[<h3 id="macOS-14-Sonoma"><a href="#macOS-14-Sonoma" class="headerlink" title="macOS 14 Sonoma"></a>macOS 14 Sonoma</h3><p>众所周知，苹果 macOS 14 终于把大刀抡向博通无线网卡，<strong>BCM94360 &#x2F; BCM943602</strong> 都无法在 Sonoma 驱动，目前的解决方案只有使用 <strong>OpenCore Legacy Patcher</strong>，可以完美驱动博通无线网卡，唯一缺点就是每次升级 OS 都需要<strong>OpenCore Legacy Patcher</strong>打补丁，下面是操作教程。</p>
+<p><strong>OpenCore Legacy Patcher</strong> 已经对 macOS Sonoma 有初步支持，原文 <a href="https://github.com/dortania/OpenCore-Legacy-Patcher/pull/1077">https://github.com/dortania/OpenCore-Legacy-Patcher/pull/1077</a></p>
+<h3 id="OpenCore-设置"><a href="#OpenCore-设置" class="headerlink" title="OpenCore 设置"></a>OpenCore 设置</h3><h4 id="NVRAM-随机访问存储器设置"><a href="#NVRAM-随机访问存储器设置" class="headerlink" title="NVRAM-随机访问存储器设置"></a>NVRAM-随机访问存储器设置</h4><blockquote>
+<p>将系统完整性保护设为 0x0803、禁用 AMFI</p>
+</blockquote>
+<ul>
+<li>在 NVRAM&gt;Add&gt;7C436110-AB2A-4BBB-A880-FE41995C9F82&gt;csr-active-config 添加 <code>03080000</code></li>
+<li>NVRAM&gt;Add&gt;7C436110-AB2A-4BBB-A880-FE41995C9F82&gt;boot-args 添加 <code>amfi=0x80</code></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272116730.webp"></p>
+<blockquote>
+<p>将 csr-active-config 添加到删除</p>
+</blockquote>
+<ul>
+<li>在 NVRAM&gt;Delete&gt;7C436110-AB2A-4BBB-A880-FE41995C9F82&gt; 添加<code>csr-active-config</code></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272119688.webp"></p>
+<h4 id="Misc-其它设置"><a href="#Misc-其它设置" class="headerlink" title="Misc-其它设置"></a>Misc-其它设置</h4><blockquote>
+<p>将安全启动模型设置为 Disabled</p>
+</blockquote>
+<ul>
+<li>Misc &gt; Security &gt; SecureBootModel &gt; <code>Disabled</code></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272121775.webp"></p>
+<h4 id="Kernel-内核设置"><a href="#Kernel-内核设置" class="headerlink" title="Kernel-内核设置"></a>Kernel-内核设置</h4><p>按以下顺序注入三个 kext   (<strong><u>一定要按图设置，否则有卡白苹果的风险</u></strong>)</p>
+<p>下载： <strong><a href="https://github.com/dortania/OpenCore-Legacy-Patcher/blob/e21efa975c0cf228cb36e81a974bc6b4c27c7807/payloads/Kexts/Wifi/IOSkywalkFamily-v1.0.0.zip">IOSkywalk.kext</a>、<a href="https://github.com/dortania/OpenCore-Legacy-Patcher/blob/e21efa975c0cf228cb36e81a974bc6b4c27c7807/payloads/Kexts/Wifi/IO80211FamilyLegacy-v1.0.0.zip">IO80211FamilyLegacy.kext</a></strong> （右边下载原始文件）</p>
+<ul>
+<li>OSkywalk.kext</li>
+<li>O80211FamilyLegacy.kext</li>
+<li>O80211FamilyLegacy.kext(AirPortBrcmNIC)</li>
+<li><strong>最小内核设置为 23.0.0</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272123218.webp"></p>
+<p>阻止<code>com.apple.iokit.IOSkywalkFamily</code>加载 (<strong><u>一定要按图设置，否则有卡白苹果的风险</u></strong>)</p>
+<ul>
+<li><strong>最小内核设置为 23.0.0</strong></li>
+<li><strong>Strategy(策略) 设置为 Exclude(阻止)</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272130168.webp"></p>
+<h4 id="以上设置好后重启电脑"><a href="#以上设置好后重启电脑" class="headerlink" title="以上设置好后重启电脑"></a>以上设置好后重启电脑</h4><hr>
+<h3 id="OpenCore-Legacy-Patcher-设置"><a href="#OpenCore-Legacy-Patcher-设置" class="headerlink" title="OpenCore Legacy Patcher 设置"></a>OpenCore Legacy Patcher 设置</h3><p>OpenCore Legacy Patcher <a href="https://bit.ly/3ZAH0ve">下载</a></p>
+<ul>
+<li>点 Post-Install Root Patch</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272136489.webp"></p>
+<ul>
+<li>Start Root Patching</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272138408.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272139664.webp"></p>
+<h4 id="以上设置好后重启电脑-1"><a href="#以上设置好后重启电脑-1" class="headerlink" title="以上设置好后重启电脑"></a>以上设置好后重启电脑</h4><hr>
+<h3 id="搞定"><a href="#搞定" class="headerlink" title="搞定"></a>搞定</h3><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309272140309.webp"></p>
+<p>且玩且珍惜~~</p>
+<hr>
+<h3 id="番外-博通网卡速率问题"><a href="#番外-博通网卡速率问题" class="headerlink" title="番外 博通网卡速率问题"></a>番外 博通网卡速率问题</h3><p>早在 macOS 13 我就发现，博通部分网卡，虽然免驱，但是链接后速率很低（350Mbps 以下），刚开始以为是无线路由问题，后来才知道需要调整所属地区代码。</p>
+<ul>
+<li><p>下载 <a href="https://github.com/acidanthera/AirportBrcmFixup/tags">AirportBrcmFixup.kext</a></p>
+</li>
+<li><p>放入 Kernel-内核设置，最大内核按图设置。（注意加载顺序）</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309281337152.webp"> </p>
+<ul>
+<li>NVRAM-随机访问存储器设置 boot-args 添加 <code>-brcmfxbeta brcmfx-country=HK</code> 地区设置成香港</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309281346642.webp"></p>
+<ul>
+<li>保存重启搞定</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309281347552.png"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>黑苹果</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从 macOS 到 iPhone 全面拥抱 RIME 输入法</title>
+    <url>/2023/04/RIME.html</url>
+    <content><![CDATA[<blockquote>
+<p>中州韵输入法引擎是由佛振编写的开源中文输入法，目前项目网站、源代码均托管在 GitHub。基于同一个核心架构，该输入法分为三个官方发行版：Linux 发行版中州韵、Windows 发行版小狼毫、macOS 发行版鼠须管。— <a href="https://zh.wikipedia.org/zh-cn/%E4%B8%AD%E5%B7%9E%E9%9F%BB%E8%BC%B8%E5%85%A5%E6%B3%95%E5%BC%95%E6%93%8E">维基百科</a></p>
+</blockquote>
+<h2 id="我的看法"><a href="#我的看法" class="headerlink" title="我的看法"></a>我的看法</h2><h3 id="初始"><a href="#初始" class="headerlink" title="初始"></a>初始</h3><p>我是一名五笔输入法使用者，大约在 16 年接触到了中州韵输入法引擎，当时使用的是 Windows 发行版小狼毫。相比于搜狗输入法，这种输入法没有设置界面，全凭用户通过修改用户文件夹或程序文件夹里的 YAML 配置文件来客制化自己的输入法，在当时绝对是一股清流。后来，像大多数人一样，由于找不到各种功能的配置文件，入门即放弃。几年后，我断断续续地使用过，但总是感觉不得要领。</p>
+<h3 id="转机"><a href="#转机" class="headerlink" title="转机"></a>转机</h3><p>直到最近，我看到一篇博文《<a href="https://ssnhd.com/2022/01/06/rime/">Rime Squirrel 鼠须管输入法配置详解</a>》，通读过才算正真了解了 RIME 输入法，就是博主的这张图彻底解决了我找不到各种配置文件目录的问题，我真心建议想用好 RIME 输入法的朋友仔细看看这篇博文，你一定会从中得到很多收获。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436637.webp"></p>
+<ul>
+<li>随即磨拳擦掌再次开始安装使用</li>
+</ul>
+<h2 id="入门到资深"><a href="#入门到资深" class="headerlink" title="入门到资深"></a>入门到资深</h2><h3 id="macOS-安装"><a href="#macOS-安装" class="headerlink" title="macOS 安装"></a>macOS 安装</h3><blockquote>
+<p>macOS 安装<a href="https://rime.im/">鼠须管</a>，Windows 安装<a href="https://github.com/rime/weasel">小狼毫</a></p>
+</blockquote>
+<p>如果你是单独使用拼音&amp;五笔，大可用博文中的<a href="https://github.com/ssnhd/rime/archive/refs/heads/master.zip">配置</a>懒人包，覆盖自已配置即可，不必折腾</p>
+<h3 id="五笔拼音混输"><a href="#五笔拼音混输" class="headerlink" title="五笔拼音混输"></a>五笔拼音混输</h3><p>如果你是五笔拼音混输使用者，那你可以使用我的<a href="https://github.com/geekbb/-RIME-geek/archive/refs/heads/main.zip">配置</a>文件覆盖使用，修改如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">📝default.custom.yaml👇</span><br><span class="line">* 五笔拼音混输设置为默认方案</span><br><span class="line">* 候选词数量 10</span><br><span class="line">📝pinyin_simp.schema.yaml👇</span><br><span class="line">* 模糊音纠错全开 (南方人福音)</span><br><span class="line">📝squirrel.custom.yaml👇</span><br><span class="line">* 后选字改为竖排</span><br><span class="line">* 字体设置为霞鹜文楷 </span><br><span class="line">* 候选字大小设置为28(更适合4K屏幕)</span><br><span class="line">* 集成皮肤N套（首推微信键盘皮肤“深浅”色）</span><br><span class="line">📝installation.yaml👇</span><br><span class="line">* 同步至 iCloud （文件夹RimeSync）</span><br><span class="line">📝wubi86_jidian_pinyin.schema.yaml👇</span><br><span class="line">*四码上屏。四码唯一时，自动上屏(影响拼音组字)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>同步 iCloud 请打开 installation.yaml 将倒数二行 geek 改为你的 Mac 管理员名称“&#x2F;Users&#x2F;<font color="#ff0000">geek</font>&#x2F;Library&#x2F;Mobi……”</li>
+<li>霞鹜文楷字体下载 <a href="https://github.com/lxgw/LxgwWenKai">https://github.com/lxgw/LxgwWenKai</a></li>
+</ul>
+<h3 id="皮肤效果"><a href="#皮肤效果" class="headerlink" title="皮肤效果"></a>皮肤效果</h3><blockquote>
+<p>首选皮肤”微信键盘皮肤”，香不香！</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436636.webp"></p>
+<blockquote>
+<p>另外几套皮肤 (借用博主的图)</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436638.webp"></p>
+<h3 id="词库管理推荐"><a href="#词库管理推荐" class="headerlink" title="词库管理推荐"></a>词库管理推荐</h3><blockquote>
+<p>管理 #Rime #五笔 词库的工具，可添加、删除、批量导入外部词条、批量生成指定版本的五笔编码，支持 macOS Windows Ubuntu 多个平台</p>
+</blockquote>
+<p><a href="https://github.com/KyleBing/wubi-dict-editor">五笔码表助手 for Rime</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436639.webp"></p>
+<p>可以看到，拼音词库是 65116，五笔词库是 89271，还不够造吗？，有了这个词库工具，自己造吧<br><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436640.webp"></p>
+<ul>
+<li>这不比微信输入法强？顺嘴一提，为了您的隐私，真心不建议国内用户安装微信输入法。</li>
+</ul>
+<h3 id="iPhone-安装"><a href="#iPhone-安装" class="headerlink" title="iPhone 安装"></a>iPhone 安装</h3><table>
+<thead>
+<tr>
+<th align="left">项目</th>
+<th align="left">地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><div>仓输入法</div></td>
+<td align="left"><a href="https://github.com/imfuxiao/Hamster">https://github.com/imfuxiao/Hamster</a></td>
+</tr>
+<tr>
+<td align="left">App Store</td>
+<td align="left"><a href="https://apps.apple.com/cn/app/%E4%BB%93%E8%BE%93%E5%85%A5%E6%B3%95/id6446617683?itsct=apps_box_badge&itscg=30200">https://apps.apple.com/cn/app/%E4%BB%93%E8%BE%93%E5%85%A5%E6%B3%95/id6446617683?itsct=apps_box_badge&amp;itscg=30200</a></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>仓输入法</strong> 经过几次迭代，已经很完备了，推荐使用。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436641.webp"></p>
+<h3 id="iPhone-拼音方案"><a href="#iPhone-拼音方案" class="headerlink" title="iPhone 拼音方案"></a>iPhone 拼音方案</h3><blockquote>
+<p>只推荐<a href="https://github.com/iDvel/rime-ice">雾凇拼音</a>，将<a href="https://github.com/iDvel/rime-ice">雾凇拼音</a>打包下载解压重命名为 Rime</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436642.webp"></p>
+<h3 id="输入方案上传"><a href="#输入方案上传" class="headerlink" title="输入方案上传"></a>输入方案上传</h3><blockquote>
+<p>打开网页，将原来的 Rime 方案删除，上传雾凇拼音包，注意文件夹还是要命名为 Rime </p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436643.webp"></p>
+<blockquote>
+<p>选择雾凇拼音，然后重新部署即可。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436644.webp"></p>
+<blockquote>
+<p>切记不要打开配色方案，相信我，用自带的主题，又快又简洁！</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202307261436645.webp"></p>
+<ul>
+<li>模糊音请修改 <code>rime_ice.schema.yaml</code> 文件</li>
+</ul>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这篇文章适用于那些既会打五笔，但又忘记某些字根需要拼音辅助的朋友。希望这篇文章能对你们有所帮助， (没错，说的就是我！)</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>App 输入法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用 Docker 将类 ChatGPT 官方服务部署到 OpenWrt 软路由</title>
     <url>/2023/05/pandora.html</url>
     <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>在生活和板砖奔波两地，ChatGPT 官网又经常抽风，碰巧两地都有软路由 OpenWrt，所以我将 ChatGPT 部署到软路由上。两地的网关都是 192.168.2.1，再把软路由上的 ChatGPT 加入 Google Chrome 收藏夹，这样就能随时在两地快速访问。</p>
@@ -2153,45 +2153,6 @@
       </tags>
   </entry>
   <entry>
-    <title>PassWall+MosDNS 分流设置</title>
-    <url>/2023/09/passwall2mosdns.html</url>
-    <content><![CDATA[<p>**<u>声明</u>**：这次仅仅我个人经验，因多年没有折腾 DNS，凭借以往设置 SmartDNS 的经验，加上又学习 MosDNS 插件基本设置，本着简单、高效、不易出错的原则，舍弃 MosDNS+Adgurad Home+PassWall 复杂套娃，只使用 PassWall+MosDNS 实现秒开网页和 4K  (梯子给力)。如发现有误或更好的配置，欢迎大家上推交流 <a href="https://x.com/geekbb/status/1707617265473257628?s=20">twitter</a></p>
-<p>2023.10.6 更新：</p>
-<ul>
-<li>MosDNS 更新到 V5.2.1 <a href="https://x.com/geekbb/status/1709549373317898667?s=20">链接</a></li>
-<li>将国内 DNS 服务器更换为 HTTPS</li>
-<li>DNS 服务器并发数改为 2</li>
-<li>启用 DNS 广告过滤</li>
-<li>PassWall 勾选 ChinaDNS-NG</li>
-</ul>
-<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>前两天我 <a href="https://x.com/geekbb/status/1705860118452347383?s=20">Twitter</a> 上推荐的 OpenWrt 固件中自带有一款 DNS 插件：<a href="https://github.com/haiibo/OpenWrt">MosDNS</a>，在其官方 <a href="https://github.com/IrineSistiana/mosdns">Github</a> 上显示是 2020 年 11 月推出第一版，现在已经迭代到 v5.2.1，我发现此 DNS 转发器设置比 SmartDNS 简单太多。想到不良林这两期【<a href="https://youtu.be/TOhF5RcTGiM?si=OwPsyWM6pdNw54Yh">再谈 DNS 泄漏</a>】【<a href="https://youtu.be/fqREM6b25SY?si=VswEPtSfQQKy6mZg">进阶•DNS 泄漏篇</a>】，在当时并没有引起我的重视，心想泄漏就泄漏，你能把我怎么样，我们就是追求极致网速体验。现在想想确实天真了 (承德) 。既然能够通过技术避免一些不必要的麻烦，为什么不更好的保护自己呢，那下面记录一下我的设置流程。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309291118344.webp" alt="不良林"></p>
-<h3 id="MosDNS-设置"><a href="#MosDNS-设置" class="headerlink" title="MosDNS 设置"></a>MosDNS 设置</h3><h4 id="MosDNS-基本设置-基本选项"><a href="#MosDNS-基本设置-基本选项" class="headerlink" title="MosDNS 基本设置 - 基本选项"></a>MosDNS 基本设置 - 基本选项</h4><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202310061858121.webp"></p>
-<h4 id="MosDNS-基本设置-高级选项"><a href="#MosDNS-基本设置-高级选项" class="headerlink" title="MosDNS 基本设置 - 高级选项"></a>MosDNS 基本设置 - 高级选项</h4><ul>
-<li>如要启用 DNS 广告过滤，记得勾选最后一项</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202310061859569.webp"></p>
-<h3 id="PassWall-设置"><a href="#PassWall-设置" class="headerlink" title="PassWall 设置"></a>PassWall 设置</h3><h4 id="PassWall-DNS"><a href="#PassWall-DNS" class="headerlink" title="PassWall DNS"></a>PassWall DNS</h4><ul>
-<li>远程 DNS 填写 <code>127.0.0.1:5335</code></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202310061859139.webp"></p>
-<h3 id="OpenWrt-DHCP-设置"><a href="#OpenWrt-DHCP-设置" class="headerlink" title="OpenWrt DHCP 设置"></a>OpenWrt DHCP 设置</h3><h4 id="DHCP-DNS-基本设置"><a href="#DHCP-DNS-基本设置" class="headerlink" title="DHCP&#x2F;DNS 基本设置"></a>DHCP&#x2F;DNS 基本设置</h4><ul>
-<li>查看 DNS 转发 是否为 <code>127.0.0.1#5335</code>（以上设置好后此处会自动变更，只需要核对。）</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309291137850.webp" alt="DHCP/DNS"></p>
-<hr>
-<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>以上设置完成后，再查询你的 DNS 泄漏<a href="https://ipleak.net/">https://ipleak.net/</a> 和 WebRTC 泄漏<a href="https://browserleaks.com/webrtc">https://browserleaks.com/webrtc</a> 如果没有中国 DNS，就基本搞定了。<strong>这只是最初阶入门玩法，要看高阶玩法和了解原理可参考不良林的几期 DNS 讲解视频。</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309292030259.webp" alt="DNS"></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>VPS</tag>
-        <tag>DNS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>快速获取 SSL 泛二级域名证书-acme.sh</title>
     <url>/2023/04/sslacme.html</url>
     <content><![CDATA[<h3 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h3><table>
@@ -2296,6 +2257,45 @@
       <tags>
         <tag>VPS</tag>
         <tag>v2ray</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PassWall+MosDNS 分流设置</title>
+    <url>/2023/09/passwall2mosdns.html</url>
+    <content><![CDATA[<p>**<u>声明</u>**：这次仅仅我个人经验，因多年没有折腾 DNS，凭借以往设置 SmartDNS 的经验，加上又学习 MosDNS 插件基本设置，本着简单、高效、不易出错的原则，舍弃 MosDNS+Adgurad Home+PassWall 复杂套娃，只使用 PassWall+MosDNS 实现秒开网页和 4K  (梯子给力)。如发现有误或更好的配置，欢迎大家上推交流 <a href="https://x.com/geekbb/status/1707617265473257628?s=20">twitter</a></p>
+<p>2023.10.6 更新：</p>
+<ul>
+<li>MosDNS 更新到 V5.2.1 <a href="https://x.com/geekbb/status/1709549373317898667?s=20">链接</a></li>
+<li>将国内 DNS 服务器更换为 HTTPS</li>
+<li>DNS 服务器并发数改为 2</li>
+<li>启用 DNS 广告过滤</li>
+<li>PassWall 勾选 ChinaDNS-NG</li>
+</ul>
+<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>前两天我 <a href="https://x.com/geekbb/status/1705860118452347383?s=20">Twitter</a> 上推荐的 OpenWrt 固件中自带有一款 DNS 插件：<a href="https://github.com/haiibo/OpenWrt">MosDNS</a>，在其官方 <a href="https://github.com/IrineSistiana/mosdns">Github</a> 上显示是 2020 年 11 月推出第一版，现在已经迭代到 v5.2.1，我发现此 DNS 转发器设置比 SmartDNS 简单太多。想到不良林这两期【<a href="https://youtu.be/TOhF5RcTGiM?si=OwPsyWM6pdNw54Yh">再谈 DNS 泄漏</a>】【<a href="https://youtu.be/fqREM6b25SY?si=VswEPtSfQQKy6mZg">进阶•DNS 泄漏篇</a>】，在当时并没有引起我的重视，心想泄漏就泄漏，你能把我怎么样，我们就是追求极致网速体验。现在想想确实天真了 (承德) 。既然能够通过技术避免一些不必要的麻烦，为什么不更好的保护自己呢，那下面记录一下我的设置流程。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309291118344.webp" alt="不良林"></p>
+<h3 id="MosDNS-设置"><a href="#MosDNS-设置" class="headerlink" title="MosDNS 设置"></a>MosDNS 设置</h3><h4 id="MosDNS-基本设置-基本选项"><a href="#MosDNS-基本设置-基本选项" class="headerlink" title="MosDNS 基本设置 - 基本选项"></a>MosDNS 基本设置 - 基本选项</h4><p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202310061858121.webp"></p>
+<h4 id="MosDNS-基本设置-高级选项"><a href="#MosDNS-基本设置-高级选项" class="headerlink" title="MosDNS 基本设置 - 高级选项"></a>MosDNS 基本设置 - 高级选项</h4><ul>
+<li>如要启用 DNS 广告过滤，记得勾选最后一项</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202310061859569.webp"></p>
+<h3 id="PassWall-设置"><a href="#PassWall-设置" class="headerlink" title="PassWall 设置"></a>PassWall 设置</h3><h4 id="PassWall-DNS"><a href="#PassWall-DNS" class="headerlink" title="PassWall DNS"></a>PassWall DNS</h4><ul>
+<li>远程 DNS 填写 <code>127.0.0.1:5335</code></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202310061859139.webp"></p>
+<h3 id="OpenWrt-DHCP-设置"><a href="#OpenWrt-DHCP-设置" class="headerlink" title="OpenWrt DHCP 设置"></a>OpenWrt DHCP 设置</h3><h4 id="DHCP-DNS-基本设置"><a href="#DHCP-DNS-基本设置" class="headerlink" title="DHCP&#x2F;DNS 基本设置"></a>DHCP&#x2F;DNS 基本设置</h4><ul>
+<li>查看 DNS 转发 是否为 <code>127.0.0.1#5335</code>（以上设置好后此处会自动变更，只需要核对。）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309291137850.webp" alt="DHCP/DNS"></p>
+<hr>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>以上设置完成后，再查询你的 DNS 泄漏<a href="https://ipleak.net/">https://ipleak.net/</a> 和 WebRTC 泄漏<a href="https://browserleaks.com/webrtc">https://browserleaks.com/webrtc</a> 如果没有中国 DNS，就基本搞定了。<strong>这只是最初阶入门玩法，要看高阶玩法和了解原理可参考不良林的几期 DNS 讲解视频。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/geekbb/oss_img/202309292030259.webp" alt="DNS"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>VPS</tag>
+        <tag>DNS</tag>
       </tags>
   </entry>
 </search>
